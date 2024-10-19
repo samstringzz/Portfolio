@@ -5,7 +5,7 @@ const socialLinks = [
   {
     id: 1,
     icon: <FiGlobe />,
-    url: "https://www.oluwatosin.vercel.app/",
+    url: "https://oluwatosin.vercel.app/",
   },
   {
     id: 2,
