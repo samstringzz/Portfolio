@@ -62,6 +62,8 @@ const ProjectsGrid = () => {
                   title={project.title}
                   category={project.category}
                   image={project.img}
+                  isFeatured={project.isFeatured}
+                  slug={project.slug}
                 />
               </a>
             ))
@@ -77,6 +79,8 @@ const ProjectsGrid = () => {
                   title={project.title}
                   category={project.category}
                   image={project.img}
+                  isFeatured={project.isFeatured}
+                  slug={project.slug}
                 />
               </a>
             ))
@@ -91,6 +95,8 @@ const ProjectsGrid = () => {
                   title={project.title}
                   category={project.category}
                   image={project.img}
+                  isFeatured={project.isFeatured}
+                  slug={project.slug}
                 />
               </a>
             ))}

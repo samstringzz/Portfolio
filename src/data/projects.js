@@ -6,6 +6,8 @@ import DDTech from "../images/DD-Tech Landing.png";
 import Training from "../images/Training Classroom.png";
 import Classroom from "../images/Classroom Dashboard.png";
 import Floating from "../images/Floating Page.png";
+import AlutaMarketImage from "../images/aluta.png"; // Placeholder
+import EMigr8AppImage from "../images/eMigr8.png"; // Placeholder
 
 export const projectsData = [
   {
@@ -56,5 +58,25 @@ export const projectsData = [
     category: "Web Application",
     img: Floating,
     externalUrl: "https://lady-gold.vercel.app",
+  },
+  {
+    id: 8,
+    title: "AlutaMarket",
+    category: "E-commerce Web Application",
+    img: AlutaMarketImage,
+    description: "An e-commerce website for buyers and sellers, allowing users to upload goods and services, interact with sellers, and rate products.",
+    technologies: ["React", "Golang", "Supabase"],
+    isFeatured: true,
+    slug: "alutamarket",
+  },
+  {
+    id: 9,
+    title: "eMigr8 App",
+    category: "Logistic Solutions App",
+    img: EMigr8AppImage,
+    description: "A logistic solutions application designed for individuals looking to relocate, focusing on travel and migration needs. I worked on the frontend using React and Tailwind CSS.",
+    technologies: ["React", "Tailwind CSS"],
+    isFeatured: true,
+    slug: "emigr8-app",
   },
 ];
