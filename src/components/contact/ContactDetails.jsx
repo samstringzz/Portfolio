@@ -8,12 +8,12 @@ const contacts = [
   },
   {
     id: 2,
-    name: "oluwatosin.ayinde@yahoo.com",
+    name: "ayindeoluwatosin09@gmail.com",
     icon: <FiMail />,
   },
   {
     id: 3,
-    name: "+234 901 8272 655",
+    name: "+234 816 088 4797",
     icon: <FiPhone />,
   },
 ];

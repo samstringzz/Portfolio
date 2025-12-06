@@ -3,37 +3,53 @@ import AboutCounter from "../components/about/AboutCounter";
 import AboutClients from "../components/about/AboutClients";
 import { AboutMeProvider } from "../context/AboutMeContext";
 import { motion } from "framer-motion";
+import Experience from "../components/Experience";
+import Skills from "../components/Skills";
+import TechStack from "../components/TechStack";
 
 const About = () => {
   return (
-    <AboutMeProvider>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
-        exit={{ opacity: 0 }}
-        className="container mx-auto"
-      >
-        <AboutMeBio />
-      </motion.div>
+    <div className="overflow-x-hidden">
+      <AboutMeProvider>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, delay: 1 }}
+          exit={{ opacity: 0 }}
+          className="container mx-auto"
+        >
+          <AboutMeBio />
+        </motion.div>
 
-      {/** Counter without paddings */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <AboutCounter />
-      </motion.div>
+        {/** Counter without paddings */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, delay: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <AboutCounter />
+        </motion.div>
+      </AboutMeProvider>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
-        exit={{ opacity: 0 }}
-        className="container mx-auto"
-      >
-        <AboutClients />
-      </motion.div>
-    </AboutMeProvider>
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Skills Section */}
+      <Skills />
+
+      {/* Tech Stack Section */}
+      <TechStack />
+
+      <AboutMeProvider>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, delay: 1 }}
+          exit={{ opacity: 0 }}
+          className="container mx-auto"
+        >
+          <AboutClients />
+        </motion.div>
+      </AboutMeProvider>
+    </div>
   );
 };
 

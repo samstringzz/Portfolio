@@ -36,13 +36,14 @@ const AppHeader = () => {
 	}
 
 	return (
+		<>
 		<motion.nav
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className="sm:container sm:mx-auto"
+			className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-primary-dark/80 border-b border-gray-200 dark:border-gray-800 shadow-sm"
 		>
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="max-w-screen-lg xl:max-w-screen-xl mx-auto block sm:flex sm:justify-between sm:items-center py-4 sm:py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
@@ -190,17 +191,15 @@ const AppHeader = () => {
 					</div>
 				</div>
 			</div>
-			{/* Hire me modal */}
-			<div>
-				{showModal ? (
-					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
-			</div>
 		</motion.nav>
+		{/* Hire me modal - outside nav for proper z-index layering */}
+		{showModal && (
+			<HireMeModal
+				onClose={showHireMeModal}
+				onRequest={showHireMeModal}
+			/>
+		)}
+	</>
 	);
 };
 
