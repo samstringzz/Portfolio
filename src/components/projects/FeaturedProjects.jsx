@@ -15,9 +15,9 @@ const FeaturedProjects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Projects</span>
+            Featured <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Projects</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A showcase of my most impactful work and innovative solutions
           </p>
@@ -99,7 +99,7 @@ const FeaturedProjects = () => {
         <div className="mt-16 flex justify-center">
           <Link
             to="/projects"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
             aria-label="View All Projects"
           >
             View All Projects

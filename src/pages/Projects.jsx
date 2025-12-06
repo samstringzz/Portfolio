@@ -6,7 +6,7 @@ const Projects = () => {
 		<div className="bg-gray-50 dark:bg-primary-dark min-h-screen">
 			<ProjectsProvider>
 				{/* Page Header */}
-				<div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-800 dark:via-purple-800 dark:to-pink-800 py-20 px-4 sm:px-6 lg:px-8">
+				<div className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 dark:from-blue-900 dark:via-blue-800 dark:to-cyan-800 py-20 px-4 sm:px-6 lg:px-8">
 					<div className="max-w-7xl mx-auto text-center">
 						<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
 							My <span className="text-yellow-300">Projects</span>

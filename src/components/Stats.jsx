@@ -67,7 +67,7 @@ const Stats = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-800 dark:via-purple-800 dark:to-pink-800 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 dark:from-blue-900 dark:via-blue-800 dark:to-cyan-800 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">

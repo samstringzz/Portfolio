@@ -35,7 +35,7 @@ const TechStack = () => {
     },
     {
       name: "Frontend",
-      color: "from-purple-500 to-pink-500",
+      color: "from-blue-600 to-cyan-600",
       technologies: [
         { name: "React", icon: <FaReact />, color: "text-cyan-500" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-black dark:text-white" },
@@ -79,9 +79,9 @@ const TechStack = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Technology <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Stack</span>
+            Technology <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Stack</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Modern technologies I use to bring ideas to life
           </p>
@@ -137,7 +137,7 @@ const TechStack = () => {
           </p>
           <a
             href="/about"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
             Learn More About Me
           </a>

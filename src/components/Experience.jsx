@@ -8,9 +8,9 @@ const Experience = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Professional <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Experience</span>
+            Professional <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Experience</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             My journey building impactful applications and solving complex problems
           </p>
@@ -18,7 +18,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-600 to-cyan-500"></div>
 
           {experienceData.map((experience, index) => (
             <div
@@ -28,7 +28,7 @@ const Experience = () => {
               } md:w-1/2`}
             >
               {/* Timeline dot */}
-              <div className="hidden md:block absolute top-8 w-4 h-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full z-10"
+              <div className="hidden md:block absolute top-8 w-4 h-4 bg-gradient-to-r from-blue-700 to-cyan-600 rounded-full z-10"
                 style={{
                   [index % 2 === 0 ? "right" : "left"]: "-9px"
                 }}
@@ -37,7 +37,7 @@ const Experience = () => {
               {/* Content card */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 relative overflow-hidden group">
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 dark:from-blue-400/5 dark:to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-cyan-600/5 dark:from-blue-400/5 dark:to-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div className="relative z-10">
                   {/* Header */}
@@ -107,7 +107,7 @@ const Experience = () => {
                 </div>
 
                 {/* Decorative corner */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 to-purple-500/10 rounded-tl-full transform translate-x-16 translate-y-16 group-hover:translate-x-12 group-hover:translate-y-12 transition-transform duration-300"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 to-cyan-500/10 rounded-tl-full transform translate-x-16 translate-y-16 group-hover:translate-x-12 group-hover:translate-y-12 transition-transform duration-300"></div>
               </div>
             </div>
           ))}

@@ -35,9 +35,9 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Technical <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Skills</span>
+            Technical <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Skills</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A comprehensive toolkit for building modern, scalable applications
           </p>
@@ -76,7 +76,7 @@ const Skills = () => {
                       {/* Animated progress bar */}
                       <div
                         style={{ width: isVisible ? `${skill.level}%` : '0%' }}
-                        className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full relative overflow-hidden transition-all duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full relative overflow-hidden transition-all duration-1000 ease-out"
                       >
                         {/* Shine effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shimmer"></div>
@@ -98,7 +98,7 @@ const Skills = () => {
             {["Figma", "Postman", "VS Code", "Xcode", "Android Studio", "Jira", "Slack", "Notion"].map((tool, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium shadow-sm hover:shadow-md transition-all hover:scale-110"
+                className="px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-700 dark:to-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium shadow-sm hover:shadow-md transition-all hover:scale-110"
               >
                 {tool}
               </span>
