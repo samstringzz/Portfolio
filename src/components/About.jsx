@@ -1,60 +1,74 @@
-import { motion } from "framer-motion";
 import { aboutData } from "../data/portfolioData";
 import { FiArrowRight } from "react-icons/fi";
 
+const signals = [
+  "React Native and product delivery",
+  "Scalable frontend systems",
+  "API integration and performance tuning",
+  "UI polish with production discipline",
+];
+
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 dark:from-primary-dark dark:via-gray-900 dark:to-primary-dark px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-5"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 dark:opacity-5"></div>
-
-      <div className="max-w-5xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {aboutData.title.split(' ')[0]} <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">{aboutData.title.split(' ')[1]}</span>
+    <section
+      id="about"
+      className="bg-[#f8f4ed] px-4 py-24 dark:bg-[#120f0d] sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700 dark:text-emerald-300">
+            About
+          </p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-stone-950 dark:text-stone-100 sm:text-5xl">
+            Senior-level delivery starts with clarity in both thinking and craft.
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto rounded-full"></div>
+          <p className="mt-5 text-base leading-8 text-stone-600 dark:text-stone-300">
+            This portfolio is designed to communicate not only what I can build,
+            but how I approach shipping products that are useful, reliable, and
+            visually considered.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {signals.map((signal) => (
+              <span
+                key={signal}
+                className="rounded-full border border-stone-300/80 px-4 py-2 text-sm text-stone-700 dark:border-white/10 dark:text-stone-200"
+              >
+                {signal}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-200 dark:border-gray-700">
-          <div className="prose prose-lg dark:prose-invert mx-auto max-w-none">
-            <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line leading-relaxed text-lg">
+        <div className="rounded-[32px] border border-stone-200/80 bg-white/85 p-8 shadow-[0_26px_90px_rgba(28,25,23,0.08)] dark:border-white/10 dark:bg-white/5 dark:shadow-[0_26px_90px_rgba(0,0,0,0.35)] sm:p-10">
+          <div className="rounded-[26px] bg-[#fffaf3] p-6 dark:bg-[#171310] sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-stone-500 dark:text-stone-400">
+              {aboutData.title}
+            </p>
+            <p className="mt-5 whitespace-pre-line text-base leading-8 text-stone-700 dark:text-stone-300">
               {aboutData.description}
             </p>
           </div>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="/about"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-stone-950 px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-stone-50 transition hover:-translate-y-0.5 hover:bg-emerald-700 dark:bg-stone-100 dark:text-stone-950 dark:hover:bg-emerald-300"
             >
               Full Story
-              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <FiArrowRight className="transition group-hover:translate-x-1" />
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-xl font-semibold backdrop-blur-sm transition-all hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full border border-stone-300/80 px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-stone-900 transition hover:-translate-y-0.5 hover:border-emerald-700 hover:text-emerald-700 dark:border-white/10 dark:text-stone-100 dark:hover:border-emerald-300 dark:hover:text-emerald-300"
             >
               Get In Touch
             </a>
           </div>
-        </div>
-
-        {/* Floating badges */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
-          {["Mobile Developer", "Cross-Platform Expert", "API Integration", "Performance Optimization"].map((badge, index) => (
-            <span
-              key={index}
-              className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full font-medium shadow-lg border border-gray-200 dark:border-gray-700"
-            >
-              {badge}
-            </span>
-          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default About; 
+export default About;

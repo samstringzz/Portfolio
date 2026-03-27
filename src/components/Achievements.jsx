@@ -1,75 +1,50 @@
-import { motion } from "framer-motion";
 import { achievementsData } from "../data/portfolioData";
 
 const Achievements = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Key <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Achievements</span>
-          </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Delivering impact through innovation, performance, and user-centric solutions
-          </p>
-        </div>
+    <section className="bg-[#f8f4ed] px-4 py-24 dark:bg-[#120f0d] sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700 dark:text-emerald-300">
+              Achievements
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-stone-950 dark:text-stone-100 sm:text-5xl">
+              Outcomes that make the portfolio feel earned.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-stone-600 dark:text-stone-300">
+              These highlights emphasize delivery impact, engineering quality,
+              and product usefulness. The aim is to make the value visible fast,
+              especially to someone reviewing many portfolios in a short time.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {achievementsData.map((achievement, index) => (
-            <div
-              key={index}
-              className="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden hover:-translate-y-2"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-cyan-600/5 dark:from-blue-400/5 dark:to-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                  {achievement.icon}
+          <div className="grid gap-6 md:grid-cols-2">
+            {achievementsData.map((achievement, index) => (
+              <article
+                key={index}
+                className="rounded-[30px] border border-stone-200/80 bg-white/90 p-7 shadow-[0_24px_80px_rgba(28,25,23,0.08)] dark:border-white/10 dark:bg-white/5 dark:shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="text-4xl">{achievement.icon}</div>
+                  <span className="rounded-full bg-[#fff3db] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-stone-700 dark:bg-[#1d1815] dark:text-stone-200">
+                    Highlight
+                  </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="mt-6 text-2xl font-semibold text-stone-950 dark:text-stone-100">
                   {achievement.title}
                 </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="mt-4 text-sm leading-8 text-stone-600 dark:text-stone-300">
                   {achievement.description}
                 </p>
-              </div>
-
-              {/* Decorative corner element */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-300"></div>
-            </div>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Achievements; 
+export default Achievements;

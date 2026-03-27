@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { statsData } from "../data/portfolioData";
 
@@ -13,7 +12,7 @@ const Stats = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
 
     if (sectionRef.current) {
@@ -40,7 +39,10 @@ const Stats = () => {
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
 
-        setCount(Math.floor(progress * end * Math.pow(10, decimals)) / Math.pow(10, decimals));
+        setCount(
+          Math.floor(progress * end * Math.pow(10, decimals)) /
+            Math.pow(10, decimals)
+        );
 
         if (progress < 1) {
           animationFrame = requestAnimationFrame(animate);
@@ -67,55 +69,51 @@ const Stats = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 dark:from-blue-900 dark:via-blue-800 dark:to-cyan-800 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="bg-[#171310] px-4 py-20 text-stone-100 dark:bg-[#0e0c0a] sm:px-6 lg:px-8"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d8b35f]">
+              Snapshot
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-stone-100 sm:text-5xl">
+              Numbers that reinforce product credibility.
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-8 text-stone-300">
+              The goal of this section is not just to show activity, but to
+              communicate execution quality, consistency, and the scale of work
+              already delivered across web and mobile products.
+            </p>
+          </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Achievements by Numbers
-          </h2>
-          <div className="w-24 h-1.5 bg-white mx-auto mb-6 rounded-full opacity-80"></div>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Transforming ideas into measurable impact
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {statsData.map((stat, index) => (
-            <div
-              key={stat.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-xl hover:scale-105"
-            >
-              {/* Icon */}
-              <div className="text-5xl mb-4">
-                {stat.icon}
-              </div>
-
-              {/* Counter */}
-              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
-                {isVisible && (
-                  <Counter
-                    end={stat.value}
-                    duration={2.5}
-                    suffix={stat.suffix}
-                    decimals={stat.suffix.includes(".") ? 1 : 0}
-                  />
-                )}
-              </div>
-
-              {/* Title */}
-              <div className="text-lg font-semibold text-white/90">
-                {stat.title}
-              </div>
-            </div>
-          ))}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {statsData.map((stat) => (
+              <article
+                key={stat.id}
+                className="rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/[0.08]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-stone-400">
+                      {stat.title}
+                    </p>
+                    <div className="mt-4 text-4xl font-semibold text-stone-50 sm:text-5xl">
+                      {isVisible && (
+                        <Counter
+                          end={stat.value}
+                          duration={2.3}
+                          suffix={stat.suffix}
+                          decimals={stat.suffix.includes(".") ? 1 : 0}
+                        />
+                      )}
+                    </div>
+                  </div>
+                  <span className="text-4xl">{stat.icon}</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -123,4 +121,3 @@ const Stats = () => {
 };
 
 export default Stats;
-

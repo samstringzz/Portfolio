@@ -1,24 +1,16 @@
-const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'E-commerce',
-	'UI/UX Design',
-	'Full Stack',
-];
-
-const ProjectsFilter = ({ setSelectProject }) => {
+const ProjectsFilter = ({ options, setSelectProject }) => {
 	return (
 		<select
 			onChange={(e) => {
 				setSelectProject(e.target.value);
 			}}
-			className="font-general-medium px-6 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-xl text-sm sm:text-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none transition-colors shadow-sm cursor-pointer hover:border-blue-400 dark:hover:border-blue-500"
+			className="font-general-medium min-w-[220px] rounded-full border border-stone-300/80 bg-white/90 px-5 py-3 text-sm text-stone-900 shadow-[0_12px_30px_rgba(28,25,23,0.08)] outline-none transition focus:border-emerald-600 dark:border-white/10 dark:bg-stone-900/80 dark:text-stone-100 dark:focus:border-emerald-400"
 		>
-			<option value={setSelectProject} className="text-sm sm:text-md">
+			<option value="" className="text-sm sm:text-md">
 				All Projects
 			</option>
 
-			{selectOptions.map((option) => (
+			{options.map((option) => (
 				<option className="text-normal sm:text-md" key={option}>
 					{option}
 				</option>

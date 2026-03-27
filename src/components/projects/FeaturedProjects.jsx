@@ -1,114 +1,97 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { ProjectsContext } from "../../context/ProjectsContext";
-import { FiArrowRight, FiExternalLink } from "react-icons/fi";
+import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 const FeaturedProjects = () => {
   const { projects } = useContext(ProjectsContext);
-
-  // Filter for featured projects
-  const featuredProjects = projects.filter(project => project.isFeatured);
+  const featuredProjects = projects.filter((project) => project.isFeatured);
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-700 to-cyan-600 text-transparent bg-clip-text">Projects</span>
-          </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-700 to-cyan-600 mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A showcase of my most impactful work and innovative solutions
-          </p>
-        </div>
+    <section className="bg-[#f2ece2] px-4 py-24 dark:bg-[#171310] sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700 dark:text-emerald-300">
+              Selected Work
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-stone-900 dark:text-stone-100 sm:text-5xl">
+              Featured case studies with stronger product context.
+            </h2>
+            <p className="mt-4 text-base leading-8 text-stone-600 dark:text-stone-300">
+              These are the projects worth opening first if you want to see how
+              I think about workflow design, frontend systems, and real user
+              outcomes beyond a nice screenshot.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {featuredProjects.map((project, index) => (
-            <div
-              key={project.id}
-              className="group"
-            >
-              <Link 
-                to={`/projects/${project.slug}`} 
-                aria-label={`View ${project.title}`}
-                className="block"
-              >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 h-full flex flex-col">
-                  {/* Image container */}
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={project.img}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                      alt={project.title}
-                    />
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
-                    {/* View icon on hover */}
-                    <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                      <FiExternalLink className="text-blue-600 dark:text-blue-400" size={20} />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex-grow flex flex-col">
-                    {/* Category badge */}
-                    <div className="mb-3">
-                      <span className="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
-                        {project.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {project.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 flex-grow line-clamp-3">
-                      {project.description}
-                    </p>
-
-                    {/* Technologies */}
-                    {project.technologies && (
-                      <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
-                        {project.technologies.slice(0, 3).map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {project.technologies.length > 3 && (
-                          <span className="px-2 py-1 text-xs text-gray-500 dark:text-gray-400">
-                            +{project.technologies.length - 3} more
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* View all button */}
-        <div className="mt-16 flex justify-center">
           <Link
             to="/projects"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            className="group inline-flex items-center gap-2 self-start rounded-full border border-stone-300/80 px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-stone-900 transition hover:-translate-y-0.5 hover:border-emerald-700 hover:text-emerald-700 dark:border-white/10 dark:text-stone-100 dark:hover:border-emerald-300 dark:hover:text-emerald-300"
             aria-label="View All Projects"
           >
             View All Projects
-            <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+            <FiArrowRight className="transition group-hover:translate-x-1" />
           </Link>
+        </div>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          {featuredProjects.map((project) => (
+            <Link
+              key={project.id}
+              to={`/projects/${project.slug}`}
+              aria-label={`View ${project.title}`}
+              className="group"
+            >
+              <article className="overflow-hidden rounded-[32px] border border-stone-200/80 bg-white/90 shadow-[0_26px_90px_rgba(28,25,23,0.08)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_32px_100px_rgba(28,25,23,0.14)] dark:border-white/10 dark:bg-stone-900/80 dark:shadow-[0_26px_90px_rgba(0,0,0,0.35)]">
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src={project.img}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    alt={project.title}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
+                  <div className="absolute left-6 right-6 top-6 flex items-center justify-between">
+                    <span className="rounded-full border border-white/15 bg-stone-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.26em] text-stone-100 backdrop-blur">
+                      {project.category}
+                    </span>
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
+                      <FiArrowUpRight size={18} />
+                    </span>
+                  </div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <p className="text-xs uppercase tracking-[0.3em] text-stone-300">
+                      {project.year} • {project.impact}
+                    </p>
+                    <h3 className="mt-3 text-3xl font-semibold text-white">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <p className="text-base leading-8 text-stone-600 dark:text-stone-300">
+                    {project.summary || project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.technologies?.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-700 dark:bg-white/5 dark:text-stone-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default FeaturedProjects; 
+export default FeaturedProjects;

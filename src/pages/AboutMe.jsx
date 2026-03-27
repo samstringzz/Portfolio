@@ -9,13 +9,12 @@ import TechStack from "../components/TechStack";
 
 const About = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-[#f8f4ed] dark:bg-[#120f0d]">
       <AboutMeProvider>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, delay: 1 }}
           exit={{ opacity: 0 }}
-          className="container mx-auto"
         >
           <AboutMeBio />
         </motion.div>
@@ -44,7 +43,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, delay: 1 }}
           exit={{ opacity: 0 }}
-          className="container mx-auto"
+          className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"
         >
           <AboutClients />
         </motion.div>
