@@ -43,8 +43,8 @@ const Hero = () => {
             <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
-            href="/files/Stoman-Resume.pdf"
-            download
+            href="/files/Oluwatosin%20Ayinde%20Samuel.docx.pdf"
+            download="Oluwatosin Ayinde Samuel.docx.pdf"
             className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-primary-dark dark:text-primary-light rounded-xl font-semibold hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 backdrop-blur-sm"
           >
             {heroData.cta.secondary}
