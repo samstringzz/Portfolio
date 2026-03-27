@@ -1,6 +1,46 @@
 import { useState, useEffect, useRef } from "react";
 import { statsData } from "../data/portfolioData";
 
+const Counter = ({ end, duration = 2, suffix = "", decimals = 0, start }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+
+    let startTime;
+    let animationFrame;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+
+      setCount(
+        Math.floor(progress * end * Math.pow(10, decimals)) /
+          Math.pow(10, decimals)
+      );
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [start, end, duration, decimals]);
+
+  return (
+    <span>
+      {decimals > 0 ? count.toFixed(decimals) : count}
+      {suffix}
+    </span>
+  );
+};
+
 const Stats = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -15,56 +55,18 @@ const Stats = () => {
       { threshold: 0.25 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
-
-  const Counter = ({ end, duration = 2, suffix = "", decimals = 0 }) => {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-      if (!isVisible) return;
-
-      let startTime;
-      let animationFrame;
-
-      const animate = (timestamp) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-
-        setCount(
-          Math.floor(progress * end * Math.pow(10, decimals)) /
-            Math.pow(10, decimals)
-        );
-
-        if (progress < 1) {
-          animationFrame = requestAnimationFrame(animate);
-        }
-      };
-
-      animationFrame = requestAnimationFrame(animate);
-
-      return () => {
-        if (animationFrame) {
-          cancelAnimationFrame(animationFrame);
-        }
-      };
-    }, [isVisible, end, duration, decimals]);
-
-    return (
-      <span>
-        {decimals > 0 ? count.toFixed(decimals) : count}
-        {suffix}
-      </span>
-    );
-  };
 
   return (
     <section
@@ -101,6 +103,7 @@ const Stats = () => {
                     <div className="mt-4 text-4xl font-semibold text-stone-50 sm:text-5xl">
                       {isVisible && (
                         <Counter
+                          start={isVisible}
                           end={stat.value}
                           duration={2.3}
                           suffix={stat.suffix}

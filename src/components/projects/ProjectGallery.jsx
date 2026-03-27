@@ -1,6 +1,3 @@
-import { useContext } from 'react';
-import SingleProjectContext from '../../context/SingleProjectContext';
-
 const ProjectGallery = ({ project }) => {
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">

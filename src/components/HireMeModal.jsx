@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi";
-import Button from "./reusable/Button";
 
 const selectOptions = [
   "Mobile App Development (iOS/Android)",
