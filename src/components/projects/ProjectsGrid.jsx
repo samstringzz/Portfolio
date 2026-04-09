@@ -4,24 +4,21 @@ import ProjectSingle from "./ProjectSingle";
 import { ProjectsContext } from "../../context/ProjectsContext";
 import ProjectsFilter from "./ProjectsFilter";
 
+const TYPE_TABS = ["All", "Web", "Mobile"];
+
 const ProjectsGrid = () => {
   const {
     projects,
     searchProject,
     setSearchProject,
-    searchProjectsByTitle,
     selectProject,
     setSelectProject,
-    selectProjectsByCategory,
+    activeType,
+    setActiveType,
+    visibleProjects,
   } = useContext(ProjectsContext);
 
-  const visibleProjects = selectProject
-    ? selectProjectsByCategory
-    : searchProject
-    ? searchProjectsByTitle
-    : projects;
-
-  const projectCategories = [...new Set(projects.map((project) => project.category))];
+  const projectCategories = [...new Set(projects.map((p) => p.category))];
 
   return (
     <section className="pb-8 pt-4 sm:pb-12 sm:pt-8">
@@ -53,7 +50,29 @@ const ProjectsGrid = () => {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center">
+          {/* Type tabs */}
+          <div className="mt-8 flex gap-2">
+            {TYPE_TABS.map((tab) => (
+              <button
+                key={tab}
+                type="button"
+                onClick={() => {
+                  setActiveType(tab);
+                  setSelectProject("");
+                  setSearchProject("");
+                }}
+                className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+                  activeType === tab
+                    ? "bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900"
+                    : "border border-stone-300 text-stone-600 hover:border-stone-500 dark:border-white/10 dark:text-stone-300 dark:hover:border-white/30"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-center">
             <label className="flex flex-1 items-center gap-3 rounded-full border border-stone-300/80 bg-stone-50/80 px-4 py-3 shadow-[0_12px_30px_rgba(28,25,23,0.05)] transition focus-within:border-emerald-600 dark:border-white/10 dark:bg-white/5">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-emerald-700 shadow-sm dark:bg-stone-950 dark:text-emerald-300">
                 <FiSearch className="h-4 w-4" />
@@ -63,15 +82,12 @@ const ProjectsGrid = () => {
                   Search by title
                 </p>
                 <input
-                  onChange={(e) => {
-                    setSearchProject(e.target.value);
-                  }}
+                  onChange={(e) => setSearchProject(e.target.value)}
                   value={searchProject}
                   className="mt-1 w-full bg-transparent text-sm text-stone-900 outline-none placeholder:text-stone-400 dark:text-stone-100"
                   id="name"
                   name="name"
                   type="search"
-                  required=""
                   placeholder="Try AlutaMarket, classroom, landing page..."
                   aria-label="Search Projects"
                 />

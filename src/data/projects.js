@@ -6,18 +6,26 @@ import DDTech from "../images/DD-Tech Landing.png";
 import Training from "../images/Training Classroom.png";
 import Classroom from "../images/Classroom Dashboard.png";
 import Floating from "../images/Floating Page.png";
-import AlutaMarketImage from "../images/aluta.png"; // Placeholder
-import EMigr8AppImage from "../images/eMigr8.png"; // Placeholder
+import AlutaMarketImage from "../images/aluta.png";
+import EMigr8AppImage from "../images/eMigr8.png";
+import VisaArchitectImage from "../images/architect.png";
+import AffiliatePortalImage from "../images/partner.png";
+import ThryftUp1 from "../images/thryftup 1.png";
+import ThryftUp2 from "../images/thryftup 2.png";
+import ThryftUp3 from "../images/thryftup 3.png";
+import Rejoyly1 from "../images/rejoyly 1.png";
+import Rejoyly2 from "../images/rejoyly 2.png";
+import Rejoyly3 from "../images/rejoyly 3.png";
 
 export const projectsData = [
   {
     id: 1,
     title: "DDSA Landing Page",
     category: "Web Application",
+    type: "Web",
     img: DDSA,
     externalUrl: "https://ddsa-live.com",
-    summary:
-      "A conversion-focused landing page built to communicate a clear offer, establish trust quickly, and turn first-time visitors into qualified leads.",
+    summary: "A conversion-focused landing page built to communicate a clear offer, establish trust quickly, and turn first-time visitors into qualified leads.",
     technologies: ["React", "Tailwind CSS", "Responsive Design"],
     year: "2024",
     status: "Live",
@@ -27,10 +35,10 @@ export const projectsData = [
     id: 2,
     title: "Laundry Website",
     category: "Web Application",
+    type: "Web",
     img: Crystal,
     externalUrl: "https://crystalclearglobalservices.com/",
-    summary:
-      "A polished service website for a laundry brand, designed to make booking and service discovery easier across mobile and desktop.",
+    summary: "A polished service website for a laundry brand, designed to make booking and service discovery easier across mobile and desktop.",
     technologies: ["React", "Tailwind CSS", "Brand UI"],
     year: "2024",
     status: "Live",
@@ -40,10 +48,10 @@ export const projectsData = [
     id: 3,
     title: "Referral Dashboard",
     category: "Web Application",
+    type: "Web",
     img: Referral,
     externalUrl: "https://test.dd-referrals.com",
-    summary:
-      "A dashboard experience for tracking referrals, managing user activity, and giving stakeholders a clearer view of growth performance.",
+    summary: "A dashboard experience for tracking referrals, managing user activity, and giving stakeholders a clearer view of growth performance.",
     technologies: ["React", "Dashboard UI", "API Integration"],
     year: "2024",
     status: "In use",
@@ -53,10 +61,10 @@ export const projectsData = [
     id: 4,
     title: "Tech School Landing Page",
     category: "Web Application",
+    type: "Web",
     img: DDTech,
     externalUrl: "https://dd-techhub.com",
-    summary:
-      "A modern education landing page structured to explain programs, communicate trust, and guide prospective students toward enrollment.",
+    summary: "A modern education landing page structured to explain programs, communicate trust, and guide prospective students toward enrollment.",
     technologies: ["React", "Tailwind CSS", "Motion"],
     year: "2024",
     status: "Live",
@@ -66,10 +74,10 @@ export const projectsData = [
     id: 5,
     title: "Tech School Portal",
     category: "Web Application",
+    type: "Web",
     img: Training,
     externalUrl: "https://training.dd-techhub.com",
-    summary:
-      "A training portal that organizes learning workflows, supports course access, and gives users a smoother educational journey online.",
+    summary: "A training portal that organizes learning workflows, supports course access, and gives users a smoother educational journey online.",
     technologies: ["React", "Portal UI", "User Workflows"],
     year: "2024",
     status: "Live",
@@ -79,10 +87,10 @@ export const projectsData = [
     id: 6,
     title: "Classroom Portal",
     category: "Web Application",
+    type: "Web",
     img: Classroom,
     externalUrl: "https://classroom.dd-techhub.com",
-    summary:
-      "A classroom management interface designed to streamline lesson access, student interaction, and digital learning operations.",
+    summary: "A classroom management interface designed to streamline lesson access, student interaction, and digital learning operations.",
     technologies: ["React", "Education UI", "State Management"],
     year: "2024",
     status: "Live",
@@ -92,10 +100,10 @@ export const projectsData = [
     id: 7,
     title: "Multi-web Landing Page",
     category: "Web Application",
+    type: "Web",
     img: Floating,
     externalUrl: "https://lady-gold.vercel.app",
-    summary:
-      "A multi-section promotional site created to present multiple service offers with a cohesive brand experience and strong visual pacing.",
+    summary: "A multi-section promotional site created to present multiple service offers with a cohesive brand experience and strong visual pacing.",
     technologies: ["React", "Landing Page Design", "Responsive UI"],
     year: "2023",
     status: "Live",
@@ -105,6 +113,7 @@ export const projectsData = [
     id: 8,
     title: "AlutaMarket",
     category: "E-commerce Web Application",
+    type: "Web",
     img: AlutaMarketImage,
     description: "An e-commerce website for buyers and sellers, allowing users to upload goods and services, interact with sellers, and rate products.",
     technologies: ["React", "Golang", "Supabase"],
@@ -113,22 +122,83 @@ export const projectsData = [
     year: "2024",
     status: "Case Study",
     impact: "Marketplace",
-    summary:
-      "A multi-vendor marketplace experience focused on product discovery, seller interaction, and scalable commerce workflows.",
+    summary: "A multi-vendor marketplace experience focused on product discovery, seller interaction, and scalable commerce workflows.",
   },
   {
     id: 9,
     title: "eMigr8 App",
-    category: "Logistic Solutions App",
+    category: "Mobile App",
+    type: "Mobile",
     img: EMigr8AppImage,
-    description: "A logistic solutions application designed for individuals looking to relocate, focusing on travel and migration needs. I worked on the frontend using React and Tailwind CSS.",
+    description: "A logistic solutions application designed for individuals looking to relocate, focusing on travel and migration needs.",
     technologies: ["React", "Tailwind CSS"],
     isFeatured: true,
     slug: "emigr8-app",
     year: "2024",
     status: "Case Study",
     impact: "Relocation product",
-    summary:
-      "A relocation-focused product interface that simplifies migration-related flows with clearer frontend interactions and guided user journeys.",
+    summary: "A relocation-focused product interface that simplifies migration-related flows with clearer frontend interactions and guided user journeys.",
+  },
+  {
+    id: 10,
+    title: "Visa Architect",
+    category: "AI SaaS Platform",
+    type: "Web",
+    img: VisaArchitectImage,
+    description: "An AI-powered visa assessment platform that analyses candidate profiles and generates personalised strategic roadmaps for high-skilled tech immigration routes.",
+    technologies: ["React 19", "TypeScript", "Firebase", "Gemini API", "Stripe"],
+    isFeatured: true,
+    slug: "visa-architect",
+    year: "2025",
+    status: "Case Study",
+    impact: "AI immigration tool",
+    summary: "An AI consultant platform that scores visa eligibility across four elite immigration routes and delivers a personalised 20–30 step action plan to close the gaps.",
+  },
+  {
+    id: 11,
+    title: "eMigr8 Affiliate Portal",
+    category: "Full Stack Web App",
+    type: "Web",
+    img: AffiliatePortalImage,
+    description: "A full-stack affiliate partner portal that lets partners track referral links, monitor earnings, and view performance analytics — with an AI marketing assistant built in.",
+    technologies: ["React 18", "TypeScript", "Firebase", "Gemini AI", "Recharts"],
+    isFeatured: true,
+    slug: "emigr8-affiliate-portal",
+    year: "2025",
+    status: "Case Study",
+    impact: "Partner growth tool",
+    summary: "A role-based affiliate dashboard with referral link management, click/conversion tracking, earnings leaderboard, and an AI-powered marketing assistant — deployed to Cloudflare's edge network.",
+  },
+  {
+    id: 12,
+    title: "ThryftUp Tablet",
+    category: "Mobile App",
+    type: "Mobile",
+    img: ThryftUp1,
+    images: [ThryftUp1, ThryftUp2, ThryftUp3],
+    description: "A React Native (Expo) white-label marketplace app for buying and selling second-hand kids' items, deployable as multiple branded apps from a single codebase.",
+    technologies: ["React Native", "Expo", "Pusher", "Google Maps", "EAS"],
+    isFeatured: true,
+    slug: "thryftup-tablet",
+    year: "2025",
+    status: "Case Study",
+    impact: "Mobile marketplace",
+    summary: "A white-label kids' resale marketplace with real-time chat, location-based discovery, a Trust Score reputation engine, and a full store owner mode — built on Expo SDK 53 with New Architecture.",
+  },
+  {
+    id: 13,
+    title: "Rejoyly",
+    category: "Mobile App",
+    type: "Mobile",
+    img: Rejoyly1,
+    images: [Rejoyly1, Rejoyly2, Rejoyly3],
+    description: "A full-featured peer-to-peer mobile marketplace for parents to buy and sell pre-loved children's items, with real-time chat, location-aware discovery, and a layered reputation system.",
+    technologies: ["React Native", "Expo", "TypeScript", "Pusher", "Firebase"],
+    isFeatured: true,
+    slug: "rejoyly",
+    year: "2025",
+    status: "Case Study",
+    impact: "Mobile marketplace",
+    summary: "A P2P kids' resale marketplace with AI-assisted listing creation, real-time Pusher chat, Trust & Joy Score reputation layers, offer/counter-offer flows, and meetup scheduling — built on React Native 0.81 + Expo 54.",
   },
 ];
