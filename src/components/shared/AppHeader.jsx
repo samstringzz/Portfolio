@@ -132,10 +132,10 @@ const AppHeader = () => {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
 						<span
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md border border-stone-400 dark:border-stone-500 text-stone-800 dark:text-stone-100 hover:border-stone-700 dark:hover:border-stone-300 rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+							className="font-general-medium sm:hidden block text-left text-md border border-stone-400 dark:border-stone-500 text-stone-800 dark:text-stone-100 hover:border-stone-700 dark:hover:border-stone-300 rounded-sm px-4 py-2 mt-2 duration-300 w-24 cursor-pointer"
 							aria-label="Hire Me Button"
 						>
-							<Button title="Hire Me" />
+							Hire Me
 						</span>
 					</div>
 				</div>
@@ -173,7 +173,7 @@ const AppHeader = () => {
 							className="text-md font-general-medium border border-stone-400 dark:border-stone-500 text-stone-800 dark:text-stone-100 hover:border-stone-700 dark:hover:border-stone-300 rounded-md px-5 py-2.5 duration-300 cursor-pointer"
 							aria-label="Hire Me Button"
 						>
-							<Button title="Hire Me" />
+							Hire Me
 						</span>
 					</div>
 
