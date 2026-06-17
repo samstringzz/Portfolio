@@ -1,7 +1,7 @@
 export const heroData = {
-  title: "Hi, I'm Oluwatosin Ayinde 👋",
+  title: "Oluwatosin Ayinde",
   subtitle: "Mobile & Full Stack Developer",
-  description: "Cross-platform mobile developer specializing in iOS & Android applications. Currently building innovative solutions, transforming complex requirements into seamless user experiences.",
+  description: "I build cross-platform mobile apps and web products. Currently at YIP Online, working with React Native, React, and TypeScript.",
   cta: {
     primary: "View My Work",
     secondary: "Download Resume"
@@ -15,11 +15,11 @@ export const heroData = {
 
 export const aboutData = {
   title: "About Me",
-  description: `I'm a Mobile & Full Stack Developer currently working at YIP Online, where I architect and develop cross-platform mobile applications for both iOS and Android ecosystems. My expertise spans the entire mobile development lifecycle, from API integration and state management to performance optimization and deployment.
+  description: `I'm a Mobile & Full Stack Developer at YIP Online, where I build cross-platform apps for iOS and Android using React Native.
 
-At YIP Online, I've been instrumental in building robust mobile solutions that serve thousands of users daily. I specialize in React Native for cross-platform development, seamlessly integrating RESTful APIs and GraphQL endpoints while ensuring optimal performance across devices. My approach combines clean architecture principles with modern development practices to deliver maintainable, scalable applications.
+I work across the full stack — React and Next.js on the frontend, PHP and Node.js on the backend — with experience in API integration, state management, and deployment.
 
-Beyond mobile development, I bring a comprehensive full-stack skill set including React, Next.js, PHP, and modern backend technologies. This versatility allows me to bridge the gap between mobile frontends and backend services, creating cohesive solutions that deliver exceptional user experiences. I'm passionate about crafting elegant solutions to complex problems and continuously evolving with emerging technologies.`
+Outside of my day job, I've delivered 15+ freelance projects including e-commerce sites, education platforms, and internal dashboards.`
 };
 
 export const achievementsData = [
@@ -219,8 +219,8 @@ export const testimonialsData = [
 ];
 
 export const contactData = {
-  title: "Let's Build Something Amazing",
-  description: "Have a project in mind or want to discuss potential opportunities? I'm always open to new challenges and collaborations.",
+  title: "Get in Touch",
+  description: "Have a project or role in mind? Feel free to reach out.",
   email: "ayindeoluwatosin09@gmail.com",
   phone: "+234 816 088 4797",
   linkedin: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367"
