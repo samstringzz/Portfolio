@@ -1,29 +1,29 @@
-import { FiGithub, FiLinkedin, FiMail, FiGlobe, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 
 const socialLinks = [
   {
     id: 1,
-    icon: <FiGlobe />,
-    url: "https://oluwatosin.vercel.app/",
-    label: "Portfolio",
-  },
-  {
-    id: 2,
     icon: <FiGithub />,
     url: "https://github.com/samstringzz",
     label: "GitHub",
   },
   {
-    id: 3,
+    id: 2,
     icon: <FiTwitter />,
     url: "https://twitter.com/ayindetosin12",
     label: "Twitter",
   },
   {
-    id: 4,
+    id: 3,
     icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/ayindeoluwatosin",
+    url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
     label: "LinkedIn",
+  },
+  {
+    id: 4,
+    icon: <FiMail />,
+    url: "mailto:ayindeoluwatosin09@gmail.com",
+    label: "Email",
   },
 ];
 
@@ -36,53 +36,46 @@ const footerLinks = [
 
 const AppFooter = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#171310] px-4 py-20 text-stone-100 dark:bg-[#0e0c0a] sm:px-6 lg:px-8">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-20 top-10 h-60 w-60 rounded-full bg-[#f08b62]/10 blur-3xl" />
-        <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#1f7a6b]/10 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl">
-        <div className="grid gap-10 rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur sm:p-10 lg:grid-cols-[1.1fr_0.7fr_0.8fr]">
+    <footer className="border-t border-white/10 bg-[#061018] px-4 py-16 text-white sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d8b35f]">
-              Footer
-            </p>
-            <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-stone-50">
+            <h3 className="text-lg font-semibold tracking-[-0.03em]">
               Oluwatosin Ayinde
             </h3>
-            <p className="mt-4 max-w-md text-sm leading-8 text-stone-300">
-              Mobile and full stack developer focused on shipping thoughtful,
-              production-ready interfaces for products that need to feel credible
-              from the first interaction.
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">
+              Mobile and full stack developer building cross-platform apps and
+              web products.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex items-center gap-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.id}
                   href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-stone-300 transition hover:-translate-y-1 hover:border-[#76c2b4] hover:text-[#76c2b4]"
+                  target={link.url.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={
+                    link.url.startsWith("mailto:")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  className="text-white/50 transition hover:text-emerald-300"
                   aria-label={link.label}
                 >
-                  <span className="text-lg">{link.icon}</span>
+                  <span className="text-xl">{link.icon}</span>
                 </a>
               ))}
             </div>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-stone-400">
-              Navigate
-            </p>
-            <ul className="mt-5 space-y-4">
+            <p className="text-sm font-medium text-white">Navigate</p>
+            <ul className="mt-4 space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-stone-300 transition hover:text-[#76c2b4]"
+                    className="text-sm text-white/60 transition hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -92,31 +85,21 @@ const AppFooter = () => {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-stone-400">
-              Contact
-            </p>
+            <p className="text-sm font-medium text-white">Contact</p>
             <a
               href="mailto:ayindeoluwatosin09@gmail.com"
-              className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-stone-200 transition hover:border-[#76c2b4] hover:text-[#76c2b4]"
+              className="mt-4 inline-block text-sm text-white/60 transition hover:text-emerald-300"
             >
-              <FiMail />
-              <span>ayindeoluwatosin09@gmail.com</span>
+              ayindeoluwatosin09@gmail.com
             </a>
-
-            <div className="mt-6 rounded-[24px] border border-white/10 bg-stone-950/60 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-stone-400">
-                Current focus
-              </p>
-              <p className="mt-3 text-sm leading-7 text-stone-300">
-                Senior frontend and mobile opportunities, product-driven teams,
-                and roles where implementation quality is expected to be visible.
-              </p>
-            </div>
+            <p className="mt-4 text-sm leading-relaxed text-white/45">
+              Open to frontend and mobile roles, and select freelance work.
+            </p>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-stone-400">
-          © {new Date().getFullYear()} Oluwatosin Ayinde. All rights reserved.
+        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/40">
+          © {new Date().getFullYear()} Oluwatosin Ayinde
         </div>
       </div>
     </footer>

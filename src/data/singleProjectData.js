@@ -1,5 +1,4 @@
 // Import images
-import Image1 from "../images/aluta.png";
 import Image2 from "../images/DD-Tech Landing.png";
 import Image3 from "../images/Crystal Clear.png";
 import Image4 from "../images/DDSA.png";
@@ -7,8 +6,6 @@ import Image5 from "../images/Training Classroom.png";
 import Image6 from "../images/Referral Dashboard.png";
 
 // Placeholder images for new projects
-import AlutaMarketDetailImage1 from "../images/aluta.png"; 
-import EMigr8AppDetailImage1 from "../images/eMigr8.png";
 import VisaArchitectDetailImage from "../images/architect.png";
 import AffiliatePortalDetailImage from "../images/partner.png";
 import ThryftUp1 from "../images/thryftup 1.png";
@@ -38,7 +35,7 @@ export const singleProjectData = {
     {
       id: 1,
       title: "Kabul Project Management UI",
-      img: Image1,
+      img: "/aluta-new.png",
     },
     {
       id: 2,
@@ -184,7 +181,7 @@ export const singleProjectData = {
       {
         id: 1,
         title: "AlutaMarket Screenshot 1",
-        img: AlutaMarketDetailImage1,
+        img: "/aluta-new.png",
       },
       // Add more images as needed
     ],
@@ -286,7 +283,7 @@ export const singleProjectData = {
       {
         id: 1,
         title: "eMigr8 App Screenshot 1",
-        img: EMigr8AppDetailImage1,
+        img: "/emigr8-new.png",
       },
       // Add more images as needed
     ],
@@ -479,12 +476,12 @@ export const singleProjectData = {
         {
           id: 1,
           title: "eMigr8 App",
-          img: EMigr8AppDetailImage1,
+          img: "/emigr8-new.png",
         },
         {
           id: 2,
           title: "AlutaMarket",
-          img: AlutaMarketDetailImage1,
+          img: "/aluta-new.png",
         },
         {
           id: 3,
@@ -600,12 +597,12 @@ export const singleProjectData = {
         {
           id: 2,
           title: "eMigr8 App",
-          img: EMigr8AppDetailImage1,
+          img: "/emigr8-new.png",
         },
         {
           id: 3,
           title: "AlutaMarket",
-          img: AlutaMarketDetailImage1,
+          img: "/aluta-new.png",
         },
       ],
     },
@@ -685,7 +682,7 @@ export const singleProjectData = {
     RelatedProject: {
       title: "More Projects",
       Projects: [
-        { id: 1, title: "eMigr8 App", img: EMigr8AppDetailImage1 },
+        { id: 1, title: "eMigr8 App", img: "/emigr8-new.png" },
         { id: 2, title: "Visa Architect", img: VisaArchitectDetailImage },
         { id: 3, title: "eMigr8 Affiliate Portal", img: AffiliatePortalDetailImage },
       ],
@@ -770,7 +767,7 @@ export const singleProjectData = {
       title: "More Projects",
       Projects: [
         { id: 1, title: "ThryftUp Tablet", img: ThryftUp1 },
-        { id: 2, title: "eMigr8 App", img: EMigr8AppDetailImage1 },
+        { id: 2, title: "eMigr8 App", img: "/emigr8-new.png" },
         { id: 3, title: "Visa Architect", img: VisaArchitectDetailImage },
       ],
     },

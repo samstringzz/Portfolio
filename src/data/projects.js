@@ -6,8 +6,6 @@ import DDTech from "../images/DD-Tech Landing.png";
 import Training from "../images/Training Classroom.png";
 import Classroom from "../images/Classroom Dashboard.png";
 import Floating from "../images/Floating Page.png";
-import AlutaMarketImage from "../images/aluta.png";
-import EMigr8AppImage from "../images/eMigr8.png";
 import VisaArchitectImage from "../images/architect.png";
 import AffiliatePortalImage from "../images/partner.png";
 import ThryftUp1 from "../images/thryftup 1.png";
@@ -114,7 +112,7 @@ export const projectsData = [
     title: "AlutaMarket",
     category: "E-commerce Web Application",
     type: "Web",
-    img: AlutaMarketImage,
+    img: "/aluta-new.png",
     description: "An e-commerce website for buyers and sellers, allowing users to upload goods and services, interact with sellers, and rate products.",
     technologies: ["React", "Golang", "Supabase"],
     isFeatured: true,
@@ -129,7 +127,7 @@ export const projectsData = [
     title: "eMigr8 App",
     category: "Mobile App",
     type: "Mobile",
-    img: EMigr8AppImage,
+    img: "/emigr8-new.png",
     description: "A logistic solutions application designed for individuals looking to relocate, focusing on travel and migration needs.",
     technologies: ["React", "Tailwind CSS"],
     isFeatured: true,

@@ -1,84 +1,60 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FiArrowDownRight, FiArrowRight } from "react-icons/fi";
 import { heroData } from "../data/portfolioData";
-import profileImage from "../images/profile.jpg";
-import {
-  FiArrowRight,
-  FiDownload,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-} from "react-icons/fi";
+import heroImage from "../images/thryftup 1.png";
 
 const Hero = () => {
   return (
-    <section className="bg-white px-4 py-20 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-28">
-      <div className="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1fr_280px]">
-        <div>
-          <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+    <section className="relative min-h-[92vh] overflow-hidden bg-[#061018] text-white">
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center opacity-45"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#061018] via-[#061018]/88 to-[#061018]/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#061018] via-transparent to-[#061018]/50" />
+        <div className="hero-grain absolute inset-0 opacity-[0.35]" />
+      </div>
+
+      <div className="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-3xl"
+        >
+          <p className="text-sm font-medium tracking-wide text-emerald-400">
             {heroData.subtitle}
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
+          <h1 className="mt-4 text-5xl font-semibold tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
             {heroData.title}
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
             {heroData.description}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+              href="#work"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-[#061018] transition hover:bg-emerald-300"
             >
               {heroData.cta.primary}
+              <FiArrowDownRight size={16} />
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-6 py-3.5 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/5"
+            >
+              Get in touch
               <FiArrowRight size={16} />
-            </a>
-            <a
-              href="/files/Oluwatosin%20Ayinde%20Samuel.docx.pdf"
-              download="Oluwatosin Ayinde Samuel.docx.pdf"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-900 transition hover:border-gray-400 dark:border-gray-600 dark:text-white dark:hover:border-gray-500"
-            >
-              <FiDownload size={16} />
-              {heroData.cta.secondary}
-            </a>
+            </Link>
           </div>
-
-          <div className="mt-8 flex items-center gap-4">
-            <a
-              href={heroData.socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin size={22} />
-            </a>
-            <a
-              href={heroData.socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              aria-label="GitHub"
-            >
-              <FiGithub size={22} />
-            </a>
-            <a
-              href={heroData.socialLinks.email}
-              className="text-gray-500 transition hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-              aria-label="Email"
-            >
-              <FiMail size={22} />
-            </a>
-          </div>
-        </div>
-
-        <div className="mx-auto w-full max-w-[280px] lg:mx-0">
-          <img
-            src={profileImage}
-            alt="Oluwatosin Ayinde"
-            className="w-full rounded-xl object-cover object-center shadow-md"
-          />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

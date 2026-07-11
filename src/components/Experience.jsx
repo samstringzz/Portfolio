@@ -1,76 +1,60 @@
+import { motion } from "framer-motion";
 import { experienceData } from "../data/portfolioData";
-import { FiBriefcase, FiCalendar, FiMapPin } from "react-icons/fi";
 
 const Experience = () => {
   return (
-    <section className="bg-white px-4 py-20 dark:bg-primary-dark sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+    <section className="bg-white px-4 py-24 dark:bg-primary-dark sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
           Experience
-        </h2>
-        <p className="mt-3 text-gray-600 dark:text-gray-300">
-          My professional background in mobile and web development.
         </p>
+        <h2 className="mt-2 max-w-xl text-3xl font-semibold tracking-[-0.03em] text-gray-950 dark:text-white sm:text-4xl">
+          Where the work happens.
+        </h2>
 
-        <div className="mt-10 space-y-8">
-          {experienceData.map((experience) => (
-            <article
+        <div className="mt-14 divide-y divide-gray-200 dark:divide-gray-700">
+          {experienceData.map((experience, index) => (
+            <motion.article
               key={experience.id}
-              className="rounded-xl border border-gray-200 p-6 dark:border-gray-700"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.15 + index * 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="grid gap-6 py-10 lg:grid-cols-[180px_1fr]"
             >
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {experience.role}
-                  </h3>
-                  <div className="mt-1 flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <FiBriefcase size={14} />
-                    <span>{experience.company}</span>
-                  </div>
-                </div>
-                <span className="self-start rounded-md bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-ternary-dark dark:text-gray-200">
-                  {experience.type}
-                </span>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
-                <div className="flex items-center gap-1.5">
-                  <FiCalendar size={14} />
-                  <span>{experience.period}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <FiMapPin size={14} />
-                  <span>{experience.location}</span>
-                </div>
-              </div>
-
-              <p className="mt-4 text-gray-600 dark:text-gray-300">
-                {experience.description}
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {experience.period}
               </p>
 
-              <ul className="mt-4 space-y-2">
-                {experience.achievements.slice(0, 4).map((achievement, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
-                  >
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {experience.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md bg-gray-50 px-2.5 py-1 text-xs text-gray-600 dark:bg-ternary-dark dark:text-gray-300"
-                  >
-                    {tech}
+              <div>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <h3 className="text-xl font-semibold text-gray-950 dark:text-white">
+                    {experience.role}
+                  </h3>
+                  <span className="text-gray-500 dark:text-gray-400">
+                    {experience.company}
                   </span>
-                ))}
+                </div>
+
+                <ul className="mt-5 max-w-3xl space-y-2">
+                  {experience.achievements.slice(0, 3).map((achievement) => (
+                    <li
+                      key={achievement}
+                      className="text-sm leading-relaxed text-gray-600 dark:text-gray-300"
+                    >
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-5 text-sm text-gray-500 dark:text-gray-400">
+                  {experience.technologies.slice(0, 6).join(" · ")}
+                </p>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

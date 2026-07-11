@@ -1,205 +1,117 @@
-import { useState } from 'react';
-import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import HireMeModal from '../HireMeModal';
-import logoLight from '../../images/logo-light.svg';
-import logoDark from '../../images/logo-dark.svg';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
+import { Link, NavLink } from "react-router-dom";
+import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+import { motion } from "framer-motion";
+
+const navLinkClass = ({ isActive }) =>
+  `text-sm font-medium transition ${
+    isActive
+      ? "text-emerald-700 dark:text-emerald-400"
+      : "text-gray-700 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white"
+  }`;
 
 const AppHeader = () => {
-	const [showMenu, setShowMenu] = useState(false);
-	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useThemeSwitcher();
+  const [showMenu, setShowMenu] = useState(false);
+  const [activeTheme, setTheme] = useThemeSwitcher();
 
-	function toggleMenu() {
-		if (!showMenu) {
-			setShowMenu(true);
-		} else {
-			setShowMenu(false);
-		}
-	}
+  function toggleMenu() {
+    setShowMenu((prev) => !prev);
+  }
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
+  return (
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      id="nav"
+      className="sticky top-0 z-50 border-b border-gray-200/80 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-[#061018]/80"
+    >
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <Link
+          to="/"
+          className="text-base font-semibold tracking-[-0.03em] text-gray-950 dark:text-white"
+        >
+          Oluwatosin Ayinde
+        </Link>
 
-	return (
-		<>
-		<motion.nav
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			id="nav"
-			className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-primary-dark/80 border-b border-gray-200 dark:border-gray-800 shadow-sm"
-		>
-			<div className="max-w-screen-lg xl:max-w-screen-xl mx-auto block sm:flex sm:justify-between sm:items-center py-4 sm:py-6">
-				{/* Header menu links and small screen hamburger menu */}
-				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div>
-						<Link to="/">
-							{activeTheme === 'dark' ? (
-								<img
-									src={logoDark}
-									className="w-36"
-									alt="Dark Logo"
-								/>
-							) : (
-								<img
-									src={logoLight}
-									className="w-36"
-									alt="Dark Logo"
-								/>
-							)}
-						</Link>
-					</div>
+        <div className="hidden items-center gap-8 sm:flex">
+          <NavLink to="/projects" className={navLinkClass}>
+            Projects
+          </NavLink>
+          <NavLink to="/about" className={navLinkClass}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClass}>
+            Contact
+          </NavLink>
 
-					{/* Theme switcher small screen */}
-					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
+          <button
+            type="button"
+            onClick={() => setTheme(activeTheme)}
+            aria-label="Theme Switcher"
+            className="rounded-lg p-2 text-gray-600 transition hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/10"
+          >
+            {activeTheme === "dark" ? (
+              <FiMoon className="text-lg" />
+            ) : (
+              <FiSun className="text-lg" />
+            )}
+          </button>
+        </div>
 
-					{/* Small screen hamburger menu */}
-					<div className="sm:hidden">
-						<button
-							onClick={toggleMenu}
-							type="button"
-							className="focus:outline-none"
-							aria-label="Hamburger Menu"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
-							>
-								{showMenu ? (
-									<FiX className="text-3xl" />
-								) : (
-									<FiMenu className="text-3xl" />
-								)}
-							</svg>
-						</button>
-					</div>
-				</div>
+        <div className="flex items-center gap-2 sm:hidden">
+          <button
+            type="button"
+            onClick={() => setTheme(activeTheme)}
+            aria-label="Theme Switcher"
+            className="rounded-lg p-2 text-gray-600 dark:text-gray-300"
+          >
+            {activeTheme === "dark" ? (
+              <FiMoon className="text-lg" />
+            ) : (
+              <FiSun className="text-lg" />
+            )}
+          </button>
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="rounded-lg p-2 text-gray-700 dark:text-gray-200"
+            aria-label="Menu"
+          >
+            {showMenu ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
+        </div>
+      </div>
 
-				{/* Header links small screen */}
-				<div
-					className={
-						showMenu
-							? 'block m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none'
-							: 'hidden'
-					}
-				>
-					<Link
-						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
-					>
-						Projects
-					</Link>
-					<Link
-						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-						aria-label="About Me"
-					>
-						About Me
-					</Link>
-					<Link
-						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-						<span
-							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md border border-stone-400 dark:border-stone-500 text-stone-800 dark:text-stone-100 hover:border-stone-700 dark:hover:border-stone-300 rounded-sm px-4 py-2 mt-2 duration-300 w-24 cursor-pointer"
-							aria-label="Hire Me Button"
-						>
-							Hire Me
-						</span>
-					</div>
-				</div>
-
-				{/* Header links large screen */}
-				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-					<Link
-						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Projects"
-					>
-						Projects
-					</Link>
-					<Link
-						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="About Me"
-					>
-						About Me
-					</Link>
-					<Link
-						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-						aria-label="Contact"
-					>
-						Contact
-					</Link>
-				</div>
-
-				{/* Header right section buttons */}
-				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
-						<span
-							onClick={showHireMeModal}
-							className="text-md font-general-medium border border-stone-400 dark:border-stone-500 text-stone-800 dark:text-stone-100 hover:border-stone-700 dark:hover:border-stone-300 rounded-md px-5 py-2.5 duration-300 cursor-pointer"
-							aria-label="Hire Me Button"
-						>
-							Hire Me
-						</span>
-					</div>
-
-					{/* Theme switcher large screen */}
-					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
-				</div>
-			</div>
-		</motion.nav>
-		{/* Hire me modal - outside nav for proper z-index layering */}
-		{showModal && (
-			<HireMeModal
-				onClose={showHireMeModal}
-				onRequest={showHireMeModal}
-			/>
-		)}
-	</>
-	);
+      {showMenu ? (
+        <div className="border-t border-gray-200 px-4 py-4 dark:border-white/10 sm:hidden">
+          <div className="flex flex-col gap-4">
+            <NavLink
+              to="/projects"
+              className={navLinkClass}
+              onClick={() => setShowMenu(false)}
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={navLinkClass}
+              onClick={() => setShowMenu(false)}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={navLinkClass}
+              onClick={() => setShowMenu(false)}
+            >
+              Contact
+            </NavLink>
+          </div>
+        </div>
+      ) : null}
+    </motion.nav>
+  );
 };
 
 export default AppHeader;

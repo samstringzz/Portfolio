@@ -1,22 +1,20 @@
-import { ProjectsProvider } from '../context/ProjectsContext';
+import { ProjectsProvider } from "../context/ProjectsContext";
 import Hero from "../components/Hero";
-import About from "../components/About";
 import FeaturedProjects from "../components/projects/FeaturedProjects";
 import Experience from "../components/Experience";
-import Skills from "../components/Skills";
+import ContactCTA from "../components/ContactCTA";
 
 const Home = () => {
-	return (
-		<main className="overflow-x-hidden">
-			<Hero />
-			<ProjectsProvider>
-				<FeaturedProjects />
-			</ProjectsProvider>
-			<Experience />
-			<Skills />
-			<About />
-		</main>
-	);
+  return (
+    <main className="overflow-x-hidden">
+      <Hero />
+      <ProjectsProvider>
+        <FeaturedProjects />
+      </ProjectsProvider>
+      <Experience />
+      <ContactCTA />
+    </main>
+  );
 };
 
 export default Home;

@@ -12,7 +12,7 @@ const Contact = () => {
 				duration: 0.5,
 				delay: 0.1,
 			}}
-			className="mx-auto flex max-w-6xl flex-col-reverse gap-8 px-4 py-16 sm:px-6 lg:mt-8 lg:flex-row lg:items-start lg:px-8"
+			className="mx-auto flex max-w-5xl flex-col-reverse gap-8 px-4 py-16 sm:px-6 lg:mt-8 lg:flex-row lg:items-start lg:px-8"
 		>
 			<ContactForm />
 			<ContactDetails />

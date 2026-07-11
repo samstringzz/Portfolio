@@ -1,16 +1,17 @@
 export const heroData = {
   title: "Oluwatosin Ayinde",
   subtitle: "Mobile & Full Stack Developer",
-  description: "I build cross-platform mobile apps and web products. Currently at YIP Online, working with React Native, React, and TypeScript.",
+  description:
+    "I design and ship cross-platform mobile apps and web products — currently at YIP Online, working with React Native, React, and TypeScript.",
   cta: {
-    primary: "View My Work",
-    secondary: "Download Resume"
+    primary: "View selected work",
+    secondary: "Download Resume",
   },
   socialLinks: {
-    linkedin: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    linkedin: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
     email: "mailto:ayindeoluwatosin09@gmail.com",
-    github: "https://github.com/samstringzz"
-  }
+    github: "https://github.com/samstringzz",
+  },
 };
 
 export const aboutData = {

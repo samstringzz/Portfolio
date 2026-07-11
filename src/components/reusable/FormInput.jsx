@@ -10,13 +10,13 @@ const FormInput = ({
   return (
     <div>
       <label
-        className="block text-sm font-semibold uppercase tracking-[0.22em] text-stone-700 dark:text-stone-200"
+        className="block text-sm font-medium text-gray-700 dark:text-gray-200"
         htmlFor={labelFor}
       >
         {inputLabel}
       </label>
       <input
-        className="mt-3 w-full rounded-[20px] border border-stone-300/80 bg-[#fffaf3] px-5 py-4 text-base text-stone-900 outline-none transition placeholder:text-stone-400 focus:border-emerald-700 dark:border-white/10 dark:bg-[#171310] dark:text-stone-100 dark:focus:border-emerald-300"
+        className="mt-2 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-emerald-600 dark:border-gray-600 dark:bg-ternary-dark dark:text-white dark:focus:border-emerald-400"
         type={inputType}
         id={inputId}
         name={inputName}
