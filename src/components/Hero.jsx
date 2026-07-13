@@ -2,24 +2,36 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FiArrowDownRight, FiArrowRight } from "react-icons/fi";
 import { heroData } from "../data/portfolioData";
-import heroImage from "../images/thryftup 1.png";
+import DotField from "./DotField";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[92vh] overflow-hidden bg-[#061018] text-white">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt=""
-          aria-hidden="true"
-          className="h-full w-full object-cover object-center opacity-45"
+      {/* Explicit-size wrapper required by DotField (see reactbits.dev) */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{ width: "100%", height: "100%", position: "absolute" }}
+      >
+        <DotField
+          className="h-full w-full"
+          dotRadius={1.8}
+          dotSpacing={16}
+          cursorRadius={520}
+          bulgeStrength={80}
+          glowRadius={180}
+          sparkle={false}
+          waveAmplitude={2.5}
+          gradientFrom="rgba(52, 211, 153, 0.55)"
+          gradientTo="rgba(125, 211, 252, 0.35)"
+          glowColor="#0a2e28"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#061018] via-[#061018]/88 to-[#061018]/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#061018] via-transparent to-[#061018]/50" />
-        <div className="hero-grain absolute inset-0 opacity-[0.35]" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20">
+      {/* Soft veil for text contrast — kept light so the field stays visible */}
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-[#061018]/80 via-[#061018]/35 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-[#061018]/90 via-transparent to-[#061018]/40" />
+
+      <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
