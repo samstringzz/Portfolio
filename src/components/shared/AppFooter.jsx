@@ -1,30 +1,12 @@
+import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
+import PageContainer from "../layout/PageContainer";
 
 const socialLinks = [
-  {
-    id: 1,
-    icon: <FiGithub />,
-    url: "https://github.com/samstringzz",
-    label: "GitHub",
-  },
-  {
-    id: 2,
-    icon: <FiTwitter />,
-    url: "https://twitter.com/ayindetosin12",
-    label: "Twitter",
-  },
-  {
-    id: 3,
-    icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
-    label: "LinkedIn",
-  },
-  {
-    id: 4,
-    icon: <FiMail />,
-    url: "mailto:ayindeoluwatosin09@gmail.com",
-    label: "Email",
-  },
+  { id: 1, icon: <FiGithub />, url: "https://github.com/samstringzz", label: "GitHub" },
+  { id: 2, icon: <FiTwitter />, url: "https://twitter.com/ayindetosin12", label: "Twitter" },
+  { id: 3, icon: <FiLinkedin />, url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367", label: "LinkedIn" },
+  { id: 4, icon: <FiMail />, url: "mailto:ayindeoluwatosin09@gmail.com", label: "Email" },
 ];
 
 const footerLinks = [
@@ -36,8 +18,8 @@ const footerLinks = [
 
 const AppFooter = () => {
   return (
-    <footer className="border-t border-white/10 bg-[#061018] px-4 py-16 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <footer className="border-t border-white/10 bg-[#061018] py-16 text-white">
+      <PageContainer>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="text-lg font-semibold tracking-[-0.03em]">
@@ -73,12 +55,12 @@ const AppFooter = () => {
             <ul className="mt-4 space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/60 transition hover:text-white"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,7 +83,7 @@ const AppFooter = () => {
         <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/40">
           © {new Date().getFullYear()} Oluwatosin Ayinde
         </div>
-      </div>
+      </PageContainer>
     </footer>
   );
 };

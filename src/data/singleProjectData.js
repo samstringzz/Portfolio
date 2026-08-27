@@ -1,176 +1,11 @@
-// Import images
-import Image2 from "../images/DD-Tech Landing.png";
-import Image3 from "../images/Crystal Clear.png";
-import Image4 from "../images/DDSA.png";
-import Image5 from "../images/Training Classroom.png";
-import Image6 from "../images/Referral Dashboard.png";
+import { additionalProjectsData } from "./additionalProjectsData";
 
-// Placeholder images for new projects
-import VisaArchitectDetailImage from "../images/architect.png";
-import AffiliatePortalDetailImage from "../images/partner.png";
-import ThryftUp1 from "../images/thryftup 1.png";
-import ThryftUp2 from "../images/thryftup 2.png";
-import ThryftUp3 from "../images/thryftup 3.png";
-import Rejoyly1 from "../images/rejoyly 1.png";
-import Rejoyly2 from "../images/rejoyly 2.png";
-import Rejoyly3 from "../images/rejoyly 3.png";
-
-// Import icons
-import {
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
-  FiTwitter,
-  FiYoutube,
-  FiGithub,
-} from "react-icons/fi";
+const defaultSocial = [
+  { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
+  { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
+];
 
 export const singleProjectData = {
-  ProjectHeader: {
-    title: "Project Management UI",
-    publishDate: "Jul 26, 2021",
-    tags: "UI / Frontend",
-  },
-  ProjectImages: [
-    {
-      id: 1,
-      title: "Kabul Project Management UI",
-      img: "/aluta-new.png",
-    },
-    {
-      id: 2,
-      title: "Kabul Project Management UI",
-      img: Image2,
-    },
-    {
-      id: 3,
-      title: "Kabul Project Management UI",
-      img: Image3,
-    },
-  ],
-  ProjectInfo: {
-    ClientHeading: "About Client",
-    CompanyInfo: [
-      {
-        id: 1,
-        title: "Name",
-        details: "Company Ltd",
-      },
-      {
-        id: 2,
-        title: "Services",
-        details: "UI Design & Frontend Development",
-      },
-      {
-        id: 3,
-        title: "Website",
-        details: "https://company.com",
-      },
-      {
-        id: 4,
-        title: "Phone",
-        details: "555 8888 888",
-      },
-    ],
-    ObjectivesHeading: "Objective",
-    ObjectivesDetails:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
-    Technologies: [
-      {
-        title: "Tools & Technologies",
-        techs: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Vue.js",
-          "TailwindCSS",
-          "AdobeXD",
-        ],
-      },
-    ],
-    ProjectDetailsHeading: "Challenge",
-    ProjectDetails: [
-      {
-        id: 1,
-        details:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-      },
-      {
-        id: 2,
-        details:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-      },
-      {
-        id: 3,
-        details:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
-      },
-      {
-        id: 4,
-        details:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.",
-      },
-    ],
-    SocialSharingHeading: "Share This",
-    SocialSharing: [
-      {
-        id: 1,
-        name: "Twitter",
-        icon: <FiTwitter />,
-        url: "https://twitter.com/realstoman",
-      },
-      {
-        id: 2,
-        name: "Instagram",
-        icon: <FiInstagram />,
-        url: "https://instagram.com/realstoman",
-      },
-      {
-        id: 3,
-        name: "Facebook",
-        icon: <FiFacebook />,
-        url: "https://facebook.com/",
-      },
-      {
-        id: 4,
-        name: "LinkedIn",
-        icon: <FiLinkedin />,
-        url: "https://linkedin.com/",
-      },
-      {
-        id: 5,
-        name: "Youtube",
-        icon: <FiYoutube />,
-        url: "https://www.youtube.com/c/StomanStudio",
-      },
-    ],
-  },
-  RelatedProject: {
-    title: "Related Projects",
-    Projects: [
-      {
-        id: 1,
-        title: "Mobile UI",
-        img: Image4,
-      },
-      {
-        id: 2,
-        title: "Web Application",
-        img: Image5,
-      },
-      {
-        id: 3,
-        title: "UI Design",
-        img: Image6,
-      },
-      {
-        id: 4,
-        title: "Kabul Mobile App UI",
-        img: Image3,
-      },
-    ],
-  },
-  // New featured projects
   "alutamarket": {
     ProjectHeader: {
       title: "AlutaMarket - E-commerce Platform",
@@ -241,13 +76,13 @@ export const singleProjectData = {
         {
           id: 1,
           name: "LinkedIn",
-          icon: <FiLinkedin />,
+          icon: "linkedin",
           url: "https://linkedin.com/", // Placeholder
         },
         {
           id: 2,
           name: "GitHub",
-          icon: <FiGithub />,
+          icon: "github",
           url: "https://github.com/", // Placeholder
         },
       ],
@@ -258,114 +93,17 @@ export const singleProjectData = {
         {
           id: 1,
           title: "Web Application",
-          img: Image5,
+          img: "/covers/training-classroom.png",
         },
         {
           id: 2,
           title: "Mobile UI",
-          img: Image4,
+          img: "/covers/ddsa.png",
         },
         {
           id: 3,
           title: "UI Design",
-          img: Image6,
-        },
-      ],
-    },
-  },
-  "emigr8-app": {
-    ProjectHeader: {
-      title: "eMigr8 App - Logistic Solutions",
-      publishDate: "Feb, 2024",
-      tags: "Frontend / Mobile App",
-    },
-    ProjectImages: [
-      {
-        id: 1,
-        title: "eMigr8 App Screenshot 1",
-        img: "/emigr8-new.png",
-      },
-      // Add more images as needed
-    ],
-    ProjectInfo: {
-      ClientHeading: "Project Details",
-      CompanyInfo: [
-        {
-          id: 1,
-          title: "Role",
-          details: "Mobile App Developer",
-        },
-        {
-          id: 2,
-          title: "Website",
-          details: "#", // Placeholder, update with actual URL if available
-        },
-        {
-          id: 3,
-          title: "Technologies",
-          details: "React, Tailwind CSS",
-        },
-      ],
-      ObjectivesHeading: "About eMigr8 App",
-      ObjectivesDetails:
-        "eMigr8 App is a specialized logistic solutions application tailored for individuals planning to relocate. It provides a seamless experience for managing various aspects of travel and migration, from documentation to logistical planning. The app aims to simplify the often complex process of moving to a new location.",
-      Technologies: [
-        {
-          title: "Tools & Technologies",
-          techs: ["React", "Tailwind CSS", "Vite"],
-        },
-      ],
-      ProjectDetailsHeading: "Key Features & Development",
-      ProjectDetails: [
-        {
-          id: 1,
-          details:
-            "Developed a responsive and interactive user interface using React, ensuring a smooth experience across various devices and screen sizes.",
-        },
-        {
-          id: 2,
-          details:
-            "Leveraged Tailwind CSS for efficient and customizable styling, enabling rapid UI development and maintaining a consistent design language.",
-        },
-        {
-          id: 3,
-          details:
-            "Implemented features for travel planning, document management, and communication tools to streamline the relocation process for users.",
-        },
-      ],
-      SocialSharingHeading: "Share This Project",
-      SocialSharing: [
-        {
-          id: 1,
-          name: "LinkedIn",
-          icon: <FiLinkedin />,
-          url: "https://linkedin.com/", // Placeholder
-        },
-        {
-          id: 2,
-          name: "GitHub",
-          icon: <FiGithub />,
-          url: "https://github.com/", // Placeholder
-        },
-      ],
-    },
-    RelatedProject: {
-      title: "More Projects",
-      Projects: [
-        {
-          id: 1,
-          title: "Web Application",
-          img: Image5,
-        },
-        {
-          id: 2,
-          title: "Mobile UI",
-          img: Image4,
-        },
-        {
-          id: 3,
-          title: "UI Design",
-          img: Image6,
+          img: "/covers/referral-dashboard.png",
         },
       ],
     },
@@ -380,7 +118,7 @@ export const singleProjectData = {
       {
         id: 1,
         title: "Visa Architect Platform",
-        img: VisaArchitectDetailImage,
+        img: "/covers/architect.png",
       },
     ],
     ProjectInfo: {
@@ -459,13 +197,13 @@ export const singleProjectData = {
         {
           id: 1,
           name: "LinkedIn",
-          icon: <FiLinkedin />,
+          icon: "linkedin",
           url: "https://linkedin.com/",
         },
         {
           id: 2,
           name: "GitHub",
-          icon: <FiGithub />,
+          icon: "github",
           url: "https://github.com/",
         },
       ],
@@ -475,8 +213,8 @@ export const singleProjectData = {
       Projects: [
         {
           id: 1,
-          title: "eMigr8 App",
-          img: "/emigr8-new.png",
+          title: "eMigr8 Companion",
+          img: "/projects/apps/eMigr81.webp",
         },
         {
           id: 2,
@@ -486,7 +224,7 @@ export const singleProjectData = {
         {
           id: 3,
           title: "Web Application",
-          img: Image5,
+          img: "/covers/training-classroom.png",
         },
       ],
     },
@@ -501,7 +239,7 @@ export const singleProjectData = {
       {
         id: 1,
         title: "eMigr8 Affiliate Partner Portal",
-        img: AffiliatePortalDetailImage,
+        img: "/covers/partner.png",
       },
     ],
     ProjectInfo: {
@@ -575,13 +313,13 @@ export const singleProjectData = {
         {
           id: 1,
           name: "LinkedIn",
-          icon: <FiLinkedin />,
+          icon: "linkedin",
           url: "https://linkedin.com/",
         },
         {
           id: 2,
           name: "GitHub",
-          icon: <FiGithub />,
+          icon: "github",
           url: "https://github.com/",
         },
       ],
@@ -592,12 +330,12 @@ export const singleProjectData = {
         {
           id: 1,
           title: "Visa Architect",
-          img: VisaArchitectDetailImage,
+          img: "/covers/architect.png",
         },
         {
           id: 2,
-          title: "eMigr8 App",
-          img: "/emigr8-new.png",
+          title: "eMigr8 Companion",
+          img: "/projects/apps/eMigr81.webp",
         },
         {
           id: 3,
@@ -613,10 +351,11 @@ export const singleProjectData = {
       publishDate: "2025",
       tags: "React Native / Mobile / White-Label",
     },
+    displayType: "Mobile",
     ProjectImages: [
-      { id: 1, title: "ThryftUp Tablet Screenshot 1", img: ThryftUp1 },
-      { id: 2, title: "ThryftUp Tablet Screenshot 2", img: ThryftUp2 },
-      { id: 3, title: "ThryftUp Tablet Screenshot 3", img: ThryftUp3 },
+      { id: 1, title: "ThryftUp Tablet Screenshot 1", img: "/covers/thryftup-1.png" },
+      { id: 2, title: "ThryftUp Tablet Screenshot 2", img: "/covers/thryftup-2.png" },
+      { id: 3, title: "ThryftUp Tablet Screenshot 3", img: "/covers/thryftup-3.png" },
     ],
     ProjectInfo: {
       ClientHeading: "Project Details",
@@ -675,16 +414,16 @@ export const singleProjectData = {
       ],
       SocialSharingHeading: "Share This Project",
       SocialSharing: [
-        { id: 1, name: "LinkedIn", icon: <FiLinkedin />, url: "https://linkedin.com/" },
-        { id: 2, name: "GitHub", icon: <FiGithub />, url: "https://github.com/" },
+        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
+        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
       ],
     },
     RelatedProject: {
       title: "More Projects",
       Projects: [
-        { id: 1, title: "eMigr8 App", img: "/emigr8-new.png" },
-        { id: 2, title: "Visa Architect", img: VisaArchitectDetailImage },
-        { id: 3, title: "eMigr8 Affiliate Portal", img: AffiliatePortalDetailImage },
+        { id: 1, title: "eMigr8 Companion", img: "/projects/apps/eMigr81.webp" },
+        { id: 2, title: "Visa Architect", img: "/covers/architect.png" },
+        { id: 3, title: "eMigr8 Affiliate Portal", img: "/covers/partner.png" },
       ],
     },
   },
@@ -694,10 +433,11 @@ export const singleProjectData = {
       publishDate: "2025",
       tags: "React Native / Mobile / Marketplace",
     },
+    displayType: "Mobile",
     ProjectImages: [
-      { id: 1, title: "Rejoyly Screenshot 1", img: Rejoyly1 },
-      { id: 2, title: "Rejoyly Screenshot 2", img: Rejoyly2 },
-      { id: 3, title: "Rejoyly Screenshot 3", img: Rejoyly3 },
+      { id: 1, title: "Rejoyly Screenshot 1", img: "/covers/rejoyly-1.png" },
+      { id: 2, title: "Rejoyly Screenshot 2", img: "/covers/rejoyly-2.png" },
+      { id: 3, title: "Rejoyly Screenshot 3", img: "/covers/rejoyly-3.png" },
     ],
     ProjectInfo: {
       ClientHeading: "Project Details",
@@ -759,17 +499,18 @@ export const singleProjectData = {
       ],
       SocialSharingHeading: "Share This Project",
       SocialSharing: [
-        { id: 1, name: "LinkedIn", icon: <FiLinkedin />, url: "https://linkedin.com/" },
-        { id: 2, name: "GitHub", icon: <FiGithub />, url: "https://github.com/" },
+        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
+        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
       ],
     },
     RelatedProject: {
       title: "More Projects",
       Projects: [
-        { id: 1, title: "ThryftUp Tablet", img: ThryftUp1 },
-        { id: 2, title: "eMigr8 App", img: "/emigr8-new.png" },
-        { id: 3, title: "Visa Architect", img: VisaArchitectDetailImage },
+        { id: 1, title: "ThryftUp Tablet", img: "/covers/thryftup-1.png" },
+        { id: 2, title: "eMigr8 Companion", img: "/projects/apps/eMigr81.webp" },
+        { id: 3, title: "Visa Architect", img: "/covers/architect.png" },
       ],
     },
   },
+  ...additionalProjectsData,
 };

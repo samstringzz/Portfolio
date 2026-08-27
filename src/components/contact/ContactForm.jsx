@@ -1,18 +1,17 @@
+import { FiSend } from "react-icons/fi";
 import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
 
 const ContactForm = () => {
   return (
-    <div className="w-full lg:w-[58%]">
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
-          Get in touch
-        </h2>
-        <p className="mt-3 max-w-xl text-gray-600 dark:text-gray-300">
-          Roles, freelance work, or product collaboration — send a message and
-          I’ll get back to you.
-        </p>
-      </div>
+    <div className="rounded-2xl border border-white/10 bg-surface-raised p-6 sm:p-8">
+      <h2 className="text-xl font-semibold text-white sm:text-2xl">
+        Send a message
+      </h2>
+      <p className="mt-2 text-sm leading-relaxed text-gray-400">
+        Share a bit of context — what you&apos;re building, timeline, and how I
+        can help.
+      </p>
 
       <form
         action="https://formspree.io/f/myzyyakr"
@@ -54,13 +53,13 @@ const ContactForm = () => {
 
         <div className="mt-5">
           <label
-            className="block text-sm font-medium text-gray-700 dark:text-gray-200"
+            className="block text-sm font-medium text-gray-200"
             htmlFor="message"
           >
             Message
           </label>
           <textarea
-            className="mt-2 min-h-[160px] w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-emerald-600 dark:border-gray-600 dark:bg-ternary-dark dark:text-white dark:focus:border-emerald-400"
+            className="mt-2 min-h-[180px] w-full resize-y rounded-lg border border-white/15 bg-[#061018] px-4 py-3 text-base text-white shadow-sm outline-none ring-0 transition placeholder:text-gray-500 focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400/30"
             id="message"
             name="message"
             rows="6"
@@ -70,8 +69,13 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className="mt-6">
-          <Button title="Send Message" type="submit" ariaLabel="Send Message" />
+        <div className="mt-8">
+          <Button
+            title="Send Message"
+            type="submit"
+            ariaLabel="Send Message"
+            icon={<FiSend size={16} />}
+          />
         </div>
       </form>
     </div>

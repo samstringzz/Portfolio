@@ -1,5 +1,6 @@
 import { useCountUp } from "react-countup";
 import CounterItem from "./CounterItem";
+import PageContainer from "../layout/PageContainer";
 
 const AboutCounter = () => {
   useCountUp({ ref: "experienceCounter", end: 4, duration: 2 });
@@ -7,8 +8,8 @@ const AboutCounter = () => {
   useCountUp({ ref: "projectsCounter", end: 99.5, duration: 2, decimals: 1 });
 
   return (
-    <section className="bg-[#171310] px-4 py-20 text-stone-100 dark:bg-[#0e0c0a] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-[#171310] py-20 text-stone-100 dark:bg-[#0e0c0a]">
+      <PageContainer>
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d8b35f]">
@@ -46,7 +47,7 @@ const AboutCounter = () => {
             />
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 };

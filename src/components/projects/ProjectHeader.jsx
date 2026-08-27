@@ -1,27 +1,59 @@
-import { FiClock, FiTag } from 'react-icons/fi';
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+import { FiClock, FiTag } from "react-icons/fi";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 
 const ProjectHeader = ({ project }) => {
-	return (
-		<div>
-			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
-				{project.ProjectHeader.title}
-			</p>
-			<div className="flex">
-				<div className="flex items-center mr-10">
-					<FiClock className="text-lg text-ternary-dark dark:text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-						{project.ProjectHeader.publishDate}
-					</span>
-				</div>
-				<div className="flex items-center">
-					<FiTag className="text-lg text-ternary-dark dark:text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-dark dark:text-primary-light">
-						{project.ProjectHeader.tags}
-					</span>
-				</div>
-			</div>
-		</div>
-	);
+  const reduceMotion = useReducedMotion();
+
+  return (
+    <motion.div
+      initial={reduceMotion ? false : "hidden"}
+      whileInView={reduceMotion ? undefined : "visible"}
+      viewport={viewportOnce}
+      variants={fadeUp}
+    >
+      <p className="mb-7 mt-8 text-left text-3xl font-bold text-white sm:mt-10 sm:text-4xl">
+        {project.ProjectHeader.title}
+      </p>
+      <div className="flex flex-wrap gap-x-10 gap-y-3">
+        <div className="flex items-center">
+          <FiClock className="text-lg text-gray-400" />
+          <span className="ml-2 leading-none text-gray-200">
+            {project.ProjectHeader.publishDate}
+          </span>
+        </div>
+        <div className="flex items-center">
+          <FiTag className="text-lg text-gray-400" />
+          <span className="ml-2 leading-none text-gray-200">
+            {project.ProjectHeader.tags}
+          </span>
+        </div>
+      </div>
+
+      {project.storeLinks?.length ? (
+        <div className="mt-6 flex flex-wrap gap-3">
+          {project.storeLinks.map((link, index) => (
+            <motion.a
+              key={link.id}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={viewportOnce}
+              transition={{ delay: index * 0.08, duration: 0.35 }}
+              whileHover={reduceMotion ? undefined : { y: -2, scale: 1.02 }}
+              className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-emerald-400 hover:text-emerald-300"
+            >
+              {link.label}
+            </motion.a>
+          ))}
+        </div>
+      ) : null}
+    </motion.div>
+  );
 };
 
 export default ProjectHeader;

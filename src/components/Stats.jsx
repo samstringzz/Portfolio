@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { statsData } from "../data/portfolioData";
+import PageContainer from "./layout/PageContainer";
 
 const Counter = ({ end, duration = 2, suffix = "", decimals = 0, start }) => {
   const [count, setCount] = useState(0);
@@ -71,9 +72,9 @@ const Stats = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#171310] px-4 py-20 text-stone-100 dark:bg-[#0e0c0a] sm:px-6 lg:px-8"
+      className="bg-[#171310] py-20 text-stone-100 dark:bg-[#0e0c0a]"
     >
-      <div className="mx-auto max-w-6xl">
+      <PageContainer>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#d8b35f]">
@@ -118,7 +119,7 @@ const Stats = () => {
             ))}
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 };

@@ -71,10 +71,12 @@ const techCategories = [
   },
 ];
 
+import PageContainer from "./layout/PageContainer";
+
 const TechStack = () => {
   return (
-    <section className="bg-white px-4 py-24 dark:bg-[#171310] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-white py-24 dark:bg-[#171310]">
+      <PageContainer>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700 dark:text-emerald-300">
@@ -128,7 +130,7 @@ const TechStack = () => {
             </article>
           ))}
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 };

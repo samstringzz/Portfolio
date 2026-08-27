@@ -1,13 +1,11 @@
 import { aboutData, contactData } from "../data/portfolioData";
 import { FiArrowRight } from "react-icons/fi";
+import PageContainer from "./layout/PageContainer";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="bg-white px-4 py-20 dark:bg-primary-dark sm:px-6 lg:px-8"
-    >
-      <div className="mx-auto max-w-5xl">
+    <section id="about" className="bg-white py-20 dark:bg-primary-dark">
+      <PageContainer>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           {aboutData.title}
         </h2>
@@ -31,7 +29,7 @@ const About = () => {
             {contactData.email}
           </a>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 };

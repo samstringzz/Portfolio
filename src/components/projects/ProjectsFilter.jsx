@@ -4,7 +4,7 @@ const ProjectsFilter = ({ options, setSelectProject }) => {
       onChange={(e) => {
         setSelectProject(e.target.value);
       }}
-      className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 outline-none transition focus:border-emerald-600 dark:border-gray-600 dark:bg-ternary-dark dark:text-white dark:focus:border-emerald-400"
+      className="rounded-lg border border-white/15 bg-surface-card px-3 py-2 text-sm text-white outline-none transition focus:border-emerald-400"
       aria-label="Filter by category"
     >
       <option value="">All categories</option>

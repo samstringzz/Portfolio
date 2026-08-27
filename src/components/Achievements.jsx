@@ -1,9 +1,10 @@
 import { achievementsData } from "../data/portfolioData";
+import PageContainer from "./layout/PageContainer";
 
 const Achievements = () => {
   return (
-    <section className="bg-[#f8f4ed] px-4 py-24 dark:bg-[#120f0d] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-[#f8f4ed] py-24 dark:bg-[#120f0d]">
+      <PageContainer>
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700 dark:text-emerald-300">
@@ -42,7 +43,7 @@ const Achievements = () => {
             ))}
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 };

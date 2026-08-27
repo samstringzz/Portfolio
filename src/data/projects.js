@@ -1,19 +1,4 @@
-// Import images
-import DDSA from "../images/DDSA.png";
-import Crystal from "../images/Crystal Clear.png";
-import Referral from "../images/Referral Dashboard.png";
-import DDTech from "../images/DD-Tech Landing.png";
-import Training from "../images/Training Classroom.png";
-import Classroom from "../images/Classroom Dashboard.png";
-import Floating from "../images/Floating Page.png";
-import VisaArchitectImage from "../images/architect.png";
-import AffiliatePortalImage from "../images/partner.png";
-import ThryftUp1 from "../images/thryftup 1.png";
-import ThryftUp2 from "../images/thryftup 2.png";
-import ThryftUp3 from "../images/thryftup 3.png";
-import Rejoyly1 from "../images/rejoyly 1.png";
-import Rejoyly2 from "../images/rejoyly 2.png";
-import Rejoyly3 from "../images/rejoyly 3.png";
+const C = "/covers";
 
 export const projectsData = [
   {
@@ -21,9 +6,10 @@ export const projectsData = [
     title: "DDSA Landing Page",
     category: "Web Application",
     type: "Web",
-    img: DDSA,
+    img: `${C}/ddsa.png`,
     externalUrl: "https://ddsa-live.com",
-    summary: "A conversion-focused landing page built to communicate a clear offer, establish trust quickly, and turn first-time visitors into qualified leads.",
+    summary:
+      "A conversion-focused landing page built to communicate a clear offer, establish trust quickly, and turn first-time visitors into qualified leads.",
     technologies: ["React", "Tailwind CSS", "Responsive Design"],
     year: "2024",
     status: "Live",
@@ -34,9 +20,10 @@ export const projectsData = [
     title: "Laundry Website",
     category: "Web Application",
     type: "Web",
-    img: Crystal,
+    img: `${C}/crystal-clear.png`,
     externalUrl: "https://crystalclearglobalservices.com/",
-    summary: "A polished service website for a laundry brand, designed to make booking and service discovery easier across mobile and desktop.",
+    summary:
+      "A polished service website for a laundry brand, designed to make booking and service discovery easier across mobile and desktop.",
     technologies: ["React", "Tailwind CSS", "Brand UI"],
     year: "2024",
     status: "Live",
@@ -47,9 +34,10 @@ export const projectsData = [
     title: "Referral Dashboard",
     category: "Web Application",
     type: "Web",
-    img: Referral,
+    img: `${C}/referral-dashboard.png`,
     externalUrl: "https://test.dd-referrals.com",
-    summary: "A dashboard experience for tracking referrals, managing user activity, and giving stakeholders a clearer view of growth performance.",
+    summary:
+      "A dashboard experience for tracking referrals, managing user activity, and giving stakeholders a clearer view of growth performance.",
     technologies: ["React", "Dashboard UI", "API Integration"],
     year: "2024",
     status: "In use",
@@ -60,9 +48,10 @@ export const projectsData = [
     title: "Tech School Landing Page",
     category: "Web Application",
     type: "Web",
-    img: DDTech,
+    img: `${C}/dd-tech.png`,
     externalUrl: "https://dd-techhub.com",
-    summary: "A modern education landing page structured to explain programs, communicate trust, and guide prospective students toward enrollment.",
+    summary:
+      "A modern education landing page structured to explain programs, communicate trust, and guide prospective students toward enrollment.",
     technologies: ["React", "Tailwind CSS", "Motion"],
     year: "2024",
     status: "Live",
@@ -73,9 +62,10 @@ export const projectsData = [
     title: "Tech School Portal",
     category: "Web Application",
     type: "Web",
-    img: Training,
+    img: `${C}/training-classroom.png`,
     externalUrl: "https://training.dd-techhub.com",
-    summary: "A training portal that organizes learning workflows, supports course access, and gives users a smoother educational journey online.",
+    summary:
+      "A training portal that organizes learning workflows, supports course access, and gives users a smoother educational journey online.",
     technologies: ["React", "Portal UI", "User Workflows"],
     year: "2024",
     status: "Live",
@@ -86,9 +76,10 @@ export const projectsData = [
     title: "Classroom Portal",
     category: "Web Application",
     type: "Web",
-    img: Classroom,
+    img: `${C}/classroom-dashboard.png`,
     externalUrl: "https://classroom.dd-techhub.com",
-    summary: "A classroom management interface designed to streamline lesson access, student interaction, and digital learning operations.",
+    summary:
+      "A classroom management interface designed to streamline lesson access, student interaction, and digital learning operations.",
     technologies: ["React", "Education UI", "State Management"],
     year: "2024",
     status: "Live",
@@ -99,9 +90,10 @@ export const projectsData = [
     title: "Multi-web Landing Page",
     category: "Web Application",
     type: "Web",
-    img: Floating,
+    img: `${C}/floating-page.png`,
     externalUrl: "https://lady-gold.vercel.app",
-    summary: "A multi-section promotional site created to present multiple service offers with a cohesive brand experience and strong visual pacing.",
+    summary:
+      "A multi-section promotional site created to present multiple service offers with a cohesive brand experience and strong visual pacing.",
     technologies: ["React", "Landing Page Design", "Responsive UI"],
     year: "2023",
     status: "Live",
@@ -113,90 +105,310 @@ export const projectsData = [
     category: "E-commerce Web Application",
     type: "Web",
     img: "/aluta-new.png",
-    description: "An e-commerce website for buyers and sellers, allowing users to upload goods and services, interact with sellers, and rate products.",
+    description:
+      "An e-commerce website for buyers and sellers, allowing users to upload goods and services, interact with sellers, and rate products.",
     technologies: ["React", "Golang", "Supabase"],
     isFeatured: true,
     slug: "alutamarket",
     year: "2024",
     status: "Case Study",
     impact: "Marketplace",
-    summary: "A multi-vendor marketplace experience focused on product discovery, seller interaction, and scalable commerce workflows.",
-  },
-  {
-    id: 9,
-    title: "eMigr8 App",
-    category: "Mobile App",
-    type: "Mobile",
-    img: "/emigr8-new.png",
-    description: "A logistic solutions application designed for individuals looking to relocate, focusing on travel and migration needs.",
-    technologies: ["React", "Tailwind CSS"],
-    isFeatured: true,
-    slug: "emigr8-app",
-    year: "2024",
-    status: "Case Study",
-    impact: "Relocation product",
-    summary: "A relocation-focused product interface that simplifies migration-related flows with clearer frontend interactions and guided user journeys.",
+    summary:
+      "A multi-vendor marketplace experience focused on product discovery, seller interaction, and scalable commerce workflows.",
   },
   {
     id: 10,
     title: "Visa Architect",
     category: "AI SaaS Platform",
     type: "Web",
-    img: VisaArchitectImage,
-    description: "An AI-powered visa assessment platform that analyses candidate profiles and generates personalised strategic roadmaps for high-skilled tech immigration routes.",
+    img: `${C}/architect.png`,
+    description:
+      "An AI-powered visa assessment platform that analyses candidate profiles and generates personalised strategic roadmaps for high-skilled tech immigration routes.",
     technologies: ["React 19", "TypeScript", "Firebase", "Gemini API", "Stripe"],
     isFeatured: true,
     slug: "visa-architect",
     year: "2025",
     status: "Case Study",
     impact: "AI immigration tool",
-    summary: "An AI consultant platform that scores visa eligibility across four elite immigration routes and delivers a personalised 20–30 step action plan to close the gaps.",
+    summary:
+      "An AI consultant platform that scores visa eligibility across four elite immigration routes and delivers a personalised 20–30 step action plan to close the gaps.",
   },
   {
     id: 11,
     title: "eMigr8 Affiliate Portal",
     category: "Full Stack Web App",
     type: "Web",
-    img: AffiliatePortalImage,
-    description: "A full-stack affiliate partner portal that lets partners track referral links, monitor earnings, and view performance analytics — with an AI marketing assistant built in.",
+    img: `${C}/partner.png`,
+    description:
+      "A full-stack affiliate partner portal that lets partners track referral links, monitor earnings, and view performance analytics — with an AI marketing assistant built in.",
     technologies: ["React 18", "TypeScript", "Firebase", "Gemini AI", "Recharts"],
     isFeatured: true,
     slug: "emigr8-affiliate-portal",
     year: "2025",
     status: "Case Study",
     impact: "Partner growth tool",
-    summary: "A role-based affiliate dashboard with referral link management, click/conversion tracking, earnings leaderboard, and an AI-powered marketing assistant — deployed to Cloudflare's edge network.",
+    summary:
+      "A role-based affiliate dashboard with referral link management, click/conversion tracking, earnings leaderboard, and an AI-powered marketing assistant — deployed to Cloudflare's edge network.",
   },
   {
     id: 12,
     title: "ThryftUp Tablet",
     category: "Mobile App",
     type: "Mobile",
-    img: ThryftUp1,
-    images: [ThryftUp1, ThryftUp2, ThryftUp3],
-    description: "A React Native (Expo) white-label marketplace app for buying and selling second-hand kids' items, deployable as multiple branded apps from a single codebase.",
+    img: `${C}/thryftup-1.png`,
+    images: [`${C}/thryftup-1.png`, `${C}/thryftup-2.png`, `${C}/thryftup-3.png`],
+    description:
+      "A React Native (Expo) white-label marketplace app for buying and selling second-hand kids' items, deployable as multiple branded apps from a single codebase.",
     technologies: ["React Native", "Expo", "Pusher", "Google Maps", "EAS"],
     isFeatured: true,
     slug: "thryftup-tablet",
     year: "2025",
     status: "Case Study",
     impact: "Mobile marketplace",
-    summary: "A white-label kids' resale marketplace with real-time chat, location-based discovery, a Trust Score reputation engine, and a full store owner mode — built on Expo SDK 53 with New Architecture.",
+    summary:
+      "A white-label kids' resale marketplace with real-time chat, location-based discovery, a Trust Score reputation engine, and a full store owner mode — built on Expo SDK 53 with New Architecture.",
   },
   {
     id: 13,
     title: "Rejoyly",
     category: "Mobile App",
     type: "Mobile",
-    img: Rejoyly1,
-    images: [Rejoyly1, Rejoyly2, Rejoyly3],
-    description: "A full-featured peer-to-peer mobile marketplace for parents to buy and sell pre-loved children's items, with real-time chat, location-aware discovery, and a layered reputation system.",
+    img: `${C}/rejoyly-1.png`,
+    images: [`${C}/rejoyly-1.png`, `${C}/rejoyly-2.png`, `${C}/rejoyly-3.png`],
+    description:
+      "A full-featured peer-to-peer mobile marketplace for parents to buy and sell pre-loved children's items, with real-time chat, location-aware discovery, and a layered reputation system.",
     technologies: ["React Native", "Expo", "TypeScript", "Pusher", "Firebase"],
     isFeatured: true,
     slug: "rejoyly",
     year: "2025",
     status: "Case Study",
     impact: "Mobile marketplace",
-    summary: "A P2P kids' resale marketplace with AI-assisted listing creation, real-time Pusher chat, Trust & Joy Score reputation layers, offer/counter-offer flows, and meetup scheduling — built on React Native 0.81 + Expo 54.",
+    summary:
+      "A P2P kids' resale marketplace with AI-assisted listing creation, real-time Pusher chat, Trust & Joy Score reputation layers, offer/counter-offer flows, and meetup scheduling — built on React Native 0.81 + Expo 54.",
+  },
+  {
+    id: 14,
+    title: "eMigr8 Visa Companion",
+    category: "Mobile App",
+    type: "Mobile",
+    img: "/projects/apps/eMigr81.webp",
+    images: [
+      "/projects/apps/eMigr81.webp",
+      "/projects/apps/eMigr82.webp",
+      "/projects/apps/eMigr83.webp",
+    ],
+    description:
+      "Live on App Store and Google Play — visa routes, quests, coaching, partner marketplace, premium content, and subscription billing on Expo 55.",
+    technologies: ["React Native", "Expo 55", "TypeScript", "Firebase", "EAS"],
+    isFeatured: true,
+    slug: "emigr8-companion",
+    year: "2025",
+    status: "Live",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/emigr8-visa-companion/id6791632754",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.eMigr8.companion",
+    impact: "Visa companion app",
+    summary:
+      "Live on iOS and Android — the flagship eMigr8 app guiding users through visa routes, coaching, partners, premium content, and in-app billing.",
+  },
+  {
+    id: 15,
+    title: "Auvra",
+    category: "Mobile App",
+    type: "Mobile",
+    img: "/projects/apps/auvra1.png",
+    images: [
+      "/projects/apps/auvra1.png",
+      "/projects/apps/auvra2.png",
+      "/projects/apps/auvra3.png",
+      "/projects/apps/auvra4.png",
+    ],
+    description:
+      "Mobile app for preserving cultural heritage — badges, vaults, collaboration, and AI-assisted transcription. iOS and Android launch planned.",
+    technologies: ["React Native", "Expo 54", "TypeScript", "Redux"],
+    isFeatured: true,
+    slug: "auvra",
+    year: "2025",
+    status: "In Development",
+    impact: "Culture platform",
+    summary:
+      "In development for iOS and Android — helping creators and communities preserve, verify, and pass down cultural assets.",
+  },
+  {
+    id: 16,
+    title: "SabiGuy Mobile",
+    category: "Mobile App",
+    type: "Mobile",
+    img: "/projects/apps/sabi1.png",
+    images: [
+      "/projects/apps/sabi1.png",
+      "/projects/apps/sabi3.png",
+      "/projects/apps/sabi4.png",
+      "/projects/apps/sabi5.png",
+      "/projects/apps/sabi6.png",
+      "/projects/apps/sabi7.png",
+    ],
+    description:
+      "Dual-sided services marketplace — bookings, Paystack payments, wallet, KYC, and real-time chat. iOS and Android launch planned.",
+    technologies: ["React Native", "Expo 55", "Paystack", "Socket.io", "Maps"],
+    isFeatured: true,
+    slug: "sabiguy",
+    year: "2025",
+    status: "In Development",
+    impact: "Services marketplace",
+    summary:
+      "In development for iOS and Android — connects customers with service providers through booking, payments, messaging, and role-based dashboards.",
+  },
+  {
+    id: 17,
+    title: "Nobzo Mobile",
+    category: "Mobile App",
+    type: "Mobile",
+    img: "/projects/apps/nobzo1.jpeg",
+    images: [
+      "/projects/apps/nobzo1.jpeg",
+      "/projects/apps/nobzo2.jpeg",
+      "/projects/apps/nobzo3.jpeg",
+    ],
+    description:
+      "Short-form video and meme platform with optimised vertical feed and real-time engagement. iOS and Android launch planned.",
+    technologies: ["React Native", "Expo 54", "Socket.io", "Firebase"],
+    isFeatured: true,
+    slug: "nobzo",
+    year: "2025",
+    status: "In Development",
+    impact: "Social video app",
+    summary:
+      "In development for iOS and Android — TikTok-style video feed with lazy video players, real-time engagement sync, and social auth.",
+  },
+  {
+    id: 18,
+    title: "WeTrave",
+    category: "Web Application",
+    type: "Web",
+    img: "/projects/apps/goodjoys1.png",
+    images: [
+      "/projects/apps/goodjoys1.png",
+      "/projects/apps/goodjoys2.png",
+      "/projects/apps/goodjoys3.png",
+    ],
+    description:
+      "Event discovery and ticket booking platform with public storefront and admin panel for reservations, QR check-in, and user management.",
+    technologies: ["Next.js 16", "Firebase", "TypeScript", "Tailwind CSS"],
+    isFeatured: true,
+    slug: "wetrave",
+    year: "2025",
+    status: "Case Study",
+    impact: "Events platform",
+    summary:
+      "Event booking platform for GoodJoys Ent. with guest checkout and organiser admin tooling.",
+  },
+  {
+    id: 19,
+    title: "MakerMan Tech",
+    category: "Web Application",
+    type: "Web",
+    img: "/projects/apps/makerman1.png",
+    images: ["/projects/apps/makerman1.png", "/projects/apps/makerman2.png"],
+    externalUrl: "https://www.makerman.tech",
+    description:
+      "Marketing site for a digital transformation agency — custom software, web/SEO, automation, AI, and dashboards.",
+    technologies: ["Next.js 16", "React 19", "Tailwind CSS", "Motion"],
+    isFeatured: true,
+    slug: "makermantech",
+    year: "2025",
+    status: "Case Study",
+    impact: "Agency marketing",
+    summary:
+      "Static-export marketing site for MakerMan Tech serving Oakville and Halton Region, Ontario.",
+  },
+  {
+    id: 20,
+    title: "eMigr8 Companion Admin",
+    category: "Web Application",
+    type: "Web",
+    img: "/projects/apps/eMigr8-admin1.png",
+    images: [
+      "/projects/apps/eMigr8-admin1.png",
+      "/projects/apps/eMigr8Admin2.png",
+      "/projects/apps/eMigr8Admin3.png",
+    ],
+    description:
+      "Admin panel for the eMigr8 Companion ecosystem — routes, coaches, content, quests, sessions, Stripe pricing, and analytics.",
+    technologies: ["React 19", "Vite", "Firebase", "Gemini AI", "Recharts"],
+    isFeatured: true,
+    slug: "emigr8-companion-admin",
+    year: "2025",
+    status: "Case Study",
+    impact: "Admin operations",
+    summary:
+      "Operations dashboard for managing visa pathways, coaches, talents, content, and platform analytics.",
+  },
+  {
+    id: 21,
+    title: "Visa Architect — Stripe Backend",
+    category: "Backend / Cloud Functions",
+    type: "Web",
+    img: `${C}/architect.png`,
+    images: [`${C}/architect.png`, "/projects/apps/gateway2.png"],
+    description:
+      "Firebase Functions backend for Visa Architect — Stripe checkout, webhooks, Gemini assessments, rate limits, and scheduled retries.",
+    technologies: ["Firebase Functions", "Stripe", "Gemini API", "Node.js"],
+    isFeatured: true,
+    slug: "visa-architect-stripe",
+    year: "2025",
+    status: "Case Study",
+    impact: "Payment infrastructure",
+    summary:
+      "Serverless payment and AI assessment pipeline powering Visa Architect subscriptions and report unlocks.",
+  },
+  {
+    id: 22,
+    title: "Rejoyly Landing Page",
+    category: "Web Application",
+    type: "Web",
+    img: "/projects/apps/rejoyly-landing1.png",
+    images: [
+      "/projects/apps/rejoyly-landing1.png",
+      "/projects/apps/rejoyly-landing2.png",
+      "/projects/apps/rejoyly-landing3.png",
+    ],
+    description:
+      "Next.js marketing site for Rejoyly with landing, app download/referral capture, legal pages, and API proxy routes.",
+    technologies: ["Next.js 16", "GSAP", "Tailwind CSS", "TypeScript"],
+    isFeatured: true,
+    slug: "rejoyly-landing",
+    year: "2025",
+    status: "Case Study",
+    impact: "Marketing site",
+    summary:
+      "Conversion-focused web presence for the Rejoyly mobile marketplace — landing, join flow, and backend integrations.",
+  },
+  {
+    id: 23,
+    title: "eMigr8 Gateway",
+    category: "Backend / Platform",
+    type: "Web",
+    img: "/projects/apps/gateway1.png",
+    images: ["/projects/apps/gateway1.png", "/projects/apps/gateway2.png"],
+    description:
+      "Auth gateway and API proxy for eMigr8 — token verification, subscription tiers, RBAC headers, paywall teasers, and embeddable SDK.",
+    technologies: ["Express", "Firebase Admin", "TypeScript", "React"],
+    isFeatured: true,
+    slug: "emigr8-gateway",
+    year: "2025",
+    status: "Case Study",
+    impact: "Auth platform",
+    summary:
+      "Central gateway enforcing subscription governance and powering third-party tool integrations via an injectable SDK.",
   },
 ];
+
+export const featuredCaseStudySlugs = projectsData
+  .filter((p) => p.isFeatured && p.slug)
+  .map((p) => p.slug);
+
+export function getProjectBySlug(slug) {
+  return projectsData.find((p) => p.slug === slug);
+}
