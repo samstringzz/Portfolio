@@ -1,8 +1,8 @@
 export const heroData = {
   title: "Oluwatosin Ayinde",
-  subtitle: "Mobile & Full Stack Developer",
+  subtitle: "Software Engineer — React Native · React · TypeScript",
   description:
-    "I design and ship cross-platform mobile apps and web products — currently at YIP Online, working with React Native, React, and TypeScript.",
+    "I build and ship cross-platform mobile apps and web products. Currently a Mobile App Developer at YIP Online, working with React Native, React, and TypeScript.",
   cta: {
     primary: "View selected work",
     secondary: "Download Resume",
@@ -16,100 +16,96 @@ export const heroData = {
 
 export const aboutData = {
   title: "About Me",
-  description: `I'm a Mobile & Full Stack Developer at YIP Online, where I build cross-platform apps for iOS and Android using React Native.
+  description: `I'm a software engineer at YIP Online, where I build React Native apps for iOS and Android.
 
-I work across the full stack — React and Next.js on the frontend, PHP and Node.js on the backend — with experience in API integration, state management, and deployment.
+I work across the stack: React and Next.js on the frontend, Node.js and Firebase on the backend, with experience in REST API integration, state management, payments, and white-label architecture.
 
-Outside of my day job, I've delivered 15+ freelance projects including e-commerce sites, education platforms, and internal dashboards.`
+Alongside my main role I take on freelance projects, including marketplaces, education platforms, and internal dashboards.`
 };
 
 export const achievementsData = [
   {
-    title: "Cross-Platform Mobile Solutions",
-    description: "Architected and delivered production-ready iOS & Android applications at YIP Online, implementing complex API integrations and achieving 4.8+ app store ratings with 99.5% crash-free sessions.",
+    title: "Cross-Platform Mobile Apps",
+    description: "Build and maintain React Native apps for Android and iOS at YIP Online, integrating REST APIs across authentication, product, cart, and checkout flows.",
     icon: "📱"
   },
   {
-    title: "Performance Optimization",
-    description: "Optimized mobile app performance reducing initial load time by 45% and API response handling by 60%, resulting in significantly improved user retention and engagement metrics.",
-    icon: "⚡"
+    title: "White-Label Architecture",
+    description: "Implemented a reusable white-label setup so a single mobile codebase supports customised deployments for multiple brands.",
+    icon: "🏷️"
   },
   {
-    title: "Scalable Architecture",
-    description: "Designed and implemented scalable application architectures serving 10,000+ active users, with robust state management, offline-first capabilities, and seamless real-time data synchronization.",
-    icon: "🚀"
+    title: "Full-Stack Marketplace",
+    description: "Built AlutaMarket end to end: seller inventory, buyer ordering, payments, ratings and reviews, with a Node.js backend and Firebase.",
+    icon: "🛒"
   },
   {
-    title: "Full-Stack Expertise",
-    description: "Successfully delivered 15+ web and mobile projects spanning e-commerce, educational platforms, and SaaS solutions, integrating modern frontend frameworks with robust backend systems.",
-    icon: "💼"
-  }
-];
-
-export const projectsData = [
-  {
-    title: "Modern E-commerce Platform",
-    category: "Full Stack",
-    tags: ["React", "PHP", "MySQL"],
-    description: "A feature-rich e-commerce platform with real-time inventory management and secure payment processing.",
-    achievements: [
-      "Implemented real-time inventory tracking reducing stock discrepancies by 90%",
-      "Integrated secure payment gateway processing $100K+ monthly transactions",
-      "Built responsive UI resulting in 40% increase in mobile conversions"
-    ],
-    image: "/path-to-your-image.jpg"
-  },
-  {
-    title: "Task Management System",
-    category: "Web Application",
-    tags: ["Next.js", "Supabase"],
-    description: "A collaborative task management system with real-time updates and team collaboration features.",
-    achievements: [
-      "Developed real-time collaboration features using WebSocket",
-      "Implemented role-based access control for enhanced security",
-      "Created intuitive UI/UX leading to 50% increase in user adoption"
-    ],
-    image: "/path-to-your-image.jpg"
+    title: "Cross-Functional Delivery",
+    description: "Work with product, UI/UX, QA, and clients to turn requirements into releases, with code review, debugging, and testing along the way.",
+    icon: "🤝"
   }
 ];
 
 export const experienceData = [
   {
     id: 1,
-    role: "Mobile Developer",
+    role: "Mobile App Developer",
     company: "YIP Online",
     type: "Full-time",
-    period: "2024 - Present",
-    location: "Remote",
-    description: "Leading mobile application development for cross-platform solutions serving thousands of users across iOS and Android platforms.",
+    period: "Nov 2025 - Present",
+    location: "Remote, Lagos",
+    description: "Building production React Native apps for Android and iOS.",
     achievements: [
-      "Architected and developed production-ready cross-platform mobile applications using React Native for iOS and Android",
-      "Implemented robust API integration layers, connecting mobile apps with RESTful and GraphQL backend services",
-      "Optimized app performance achieving 45% reduction in load times and maintaining 99.5% crash-free sessions",
-      "Integrated advanced features including real-time notifications, offline storage, and seamless data synchronization",
-      "Collaborated with cross-functional teams using Agile methodologies to deliver features on schedule",
-      "Implemented state management solutions using Redux and Context API for scalable application architecture",
-      "Conducted code reviews and established best practices for mobile development workflows"
+      "Build and maintain React Native apps for Android and iOS, turning product requirements into production features",
+      "Built a reusable white-label setup so one shared codebase supports customised deployments for multiple brands",
+      "Integrated REST APIs across authentication, product, cart, and checkout flows, including state handling and validation",
+      "Work with product, UI/UX, and QA to test, debug, and ship client-facing releases"
     ],
-    technologies: ["React Native", "TypeScript", "Redux", "RESTful APIs", "GraphQL", "Firebase", "iOS", "Android", "Git"]
+    technologies: ["React Native", "TypeScript", "Redux Toolkit", "REST APIs", "Firebase", "Git"]
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "Freelance & Contract Work",
+    role: "Freelance Developer",
+    company: "Bincom Dev Center",
     type: "Freelance",
-    period: "2022 - 2024",
-    location: "Remote",
-    description: "Delivered comprehensive web solutions for diverse clients, spanning e-commerce, educational platforms, and business applications.",
+    period: "Feb 2024 - Present",
+    location: "Remote, Lagos",
+    description: "Freelance development of SaaS web applications.",
     achievements: [
-      "Built and deployed 15+ production web applications using React, Next.js, and PHP",
-      "Developed custom e-commerce platforms processing $100K+ in monthly transactions",
-      "Created educational management systems for tech schools including student portals and classroom dashboards",
-      "Implemented secure authentication systems and role-based access control",
-      "Integrated payment gateways and third-party APIs for enhanced functionality",
-      "Optimized database queries and application performance, improving load times by 60%"
+      "Build and maintain SaaS web apps with React and Firebase, turning user stories and wireframes into reusable features",
+      "Integrate third-party APIs and take part in code reviews to keep code aligned with team standards",
+      "Work directly with clients to gather requirements and demo completed features"
     ],
-    technologies: ["React.js", "Next.js", "PHP", "MySQL", "Supabase", "Tailwind CSS", "JavaScript", "REST APIs"]
+    technologies: ["React", "Firebase", "REST APIs", "Git"]
+  },
+  {
+    id: 3,
+    role: "Full Stack Developer",
+    company: "Pyramid Tech Lab",
+    type: "Contract",
+    period: "Jan 2025 - Jun 2026",
+    location: "Remote, Lagos",
+    description: "Built the AlutaMarket e-commerce marketplace.",
+    achievements: [
+      "Built AlutaMarket: seller inventory management, product discovery, ordering, reviews, and payments",
+      "Developed Node.js services for authentication and product management, with Firebase for storage and real-time sync",
+      "Integrated a payment gateway and built responsive React and Tailwind CSS interfaces for mobile-friendly commerce"
+    ],
+    technologies: ["React", "Tailwind CSS", "Node.js", "Firebase"]
+  },
+  {
+    id: 4,
+    role: "Frontend Developer",
+    company: "D-Degree Digital Hub",
+    type: "Full-time",
+    period: "Jan 2023 - Dec 2024",
+    location: "Lagos",
+    description: "Built responsive frontend applications and education portals.",
+    achievements: [
+      "Built responsive, accessible frontends with a maintainable component structure, from UX wireframes and prototypes",
+      "Took part in code reviews and cross-team delivery to keep frontend code consistent and releases stable"
+    ],
+    technologies: ["React", "JavaScript", "Tailwind CSS", "PHP"]
   }
 ];
 
@@ -119,105 +115,47 @@ export const skillsData = {
       title: "Mobile Development",
       icon: "📱",
       skills: [
-        { name: "React Native", level: 90 },
-        { name: "iOS Development", level: 85 },
-        { name: "Android Development", level: 85 },
-        { name: "Mobile UI/UX", level: 88 },
-        { name: "App Performance", level: 87 },
-        { name: "Native Modules", level: 80 }
+        { name: "React Native" },
+        { name: "Expo" },
+        { name: "Redux Toolkit" },
+        { name: "Mobile UI/UX" }
       ]
     },
     {
       title: "Frontend Development",
       icon: "💻",
       skills: [
-        { name: "React.js", level: 92 },
-        { name: "Next.js", level: 88 },
-        { name: "TypeScript", level: 85 },
-        { name: "JavaScript (ES6+)", level: 90 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Redux/State Management", level: 87 }
+        { name: "React.js" },
+        { name: "Next.js" },
+        { name: "TypeScript" },
+        { name: "JavaScript (ES6+)" },
+        { name: "Tailwind CSS" }
       ]
     },
     {
       title: "Backend Development",
       icon: "⚙️",
       skills: [
-        { name: "Node.js", level: 82 },
-        { name: "PHP", level: 80 },
-        { name: "RESTful APIs", level: 90 },
-        { name: "GraphQL", level: 78 },
-        { name: "MySQL", level: 83 },
-        { name: "Supabase", level: 85 }
+        { name: "Node.js" },
+        { name: "PHP" },
+        { name: "RESTful APIs" },
+        { name: "MySQL" },
+        { name: "MongoDB" },
+        { name: "Firebase" }
       ]
     },
     {
       title: "Tools & Technologies",
       icon: "🛠️",
       skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "Firebase", level: 85 },
-        { name: "CI/CD Pipelines", level: 75 },
-        { name: "Docker", level: 70 },
-        { name: "Jest/Testing", level: 80 },
-        { name: "Agile/Scrum", level: 85 }
+        { name: "Git & GitHub" },
+        { name: "Jest/Testing" },
+        { name: "Postman" },
+        { name: "Figma" }
       ]
     }
   ]
 };
-
-export const statsData = [
-  {
-    id: 1,
-    title: "Projects Completed",
-    value: 15,
-    suffix: "+",
-    icon: "🎯"
-  },
-  {
-    id: 2,
-    title: "Happy Clients",
-    value: 12,
-    suffix: "+",
-    icon: "😊"
-  },
-  {
-    id: 3,
-    title: "Code Commits",
-    value: 2500,
-    suffix: "+",
-    icon: "💻"
-  },
-  {
-    id: 4,
-    title: "App Store Rating",
-    value: 4.8,
-    suffix: "/5.0",
-    icon: "⭐"
-  }
-];
-
-export const blogData = [
-  {
-    title: "Building Scalable Applications with Next.js and Supabase",
-    description: "Learn how to leverage the power of Next.js and Supabase to build scalable, real-time applications that can handle millions of users while maintaining performance and security.",
-    link: "https://medium.com/@yourprofile/nextjs-supabase"
-  },
-  {
-    title: "Modern PHP Development: Best Practices for 2024",
-    description: "Discover the latest best practices in PHP development, from modern frameworks to performance optimization techniques that will take your applications to the next level.",
-    link: "https://medium.com/@yourprofile/modern-php"
-  }
-];
-
-export const testimonialsData = [
-  {
-    quote: "Working with [Your Name] was an absolute pleasure. Their expertise in both frontend and backend development helped us deliver our project ahead of schedule. The attention to detail and commitment to quality was outstanding.",
-    author: "John Smith",
-    role: "Project Manager",
-    company: "Tech Solutions Inc."
-  }
-];
 
 export const contactData = {
   title: "Get in Touch",
