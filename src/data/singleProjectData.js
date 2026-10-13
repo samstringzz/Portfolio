@@ -365,6 +365,7 @@ export const singleProjectData = {
         { id: 2, title: "Platform", details: "iOS & Android (Expo)" },
         { id: 3, title: "Architecture", details: "White-Label / Multi-Brand" },
         { id: 4, title: "Year", details: "2025" },
+        { id: 5, title: "Company", details: "YIP Online" },
       ],
       ObjectivesHeading: "About ThryftUp Tablet",
       ObjectivesDetails:
