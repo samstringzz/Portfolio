@@ -1,8 +1,8 @@
 import { additionalProjectsData } from "./additionalProjectsData";
 
 const defaultSocial = [
-  { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
-  { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
+  { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367" },
+  { id: 2, name: "GitHub", icon: "github", url: "https://github.com/samstringzz" },
 ];
 
 export const singleProjectData = {
@@ -31,7 +31,8 @@ export const singleProjectData = {
         {
           id: 2,
           title: "Website",
-          details: "www.alutamarket.com", // Placeholder, update with actual URL if available
+          details: "www.alutamarket.com",
+          url: "https://www.alutamarket.com",
         },
         {
           id: 3,
@@ -71,19 +72,19 @@ export const singleProjectData = {
             "Integrated features for product ratings and reviews, enabling buyers to provide feedback and helping other users make informed decisions. Implemented secure payment gateways to ensure safe transactions for all users.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: [
         {
           id: 1,
           name: "LinkedIn",
           icon: "linkedin",
-          url: "https://linkedin.com/", // Placeholder
+          url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
         },
         {
           id: 2,
           name: "GitHub",
           icon: "github",
-          url: "https://github.com/", // Placeholder
+          url: "https://github.com/samstringzz",
         },
       ],
     },
@@ -192,19 +193,19 @@ export const singleProjectData = {
             "Engineered rate limiting, abuse protection, and UTM/referral attribution tracking to safeguard the platform and measure acquisition channels. Additional features include PDF export of full reports, CV file upload via Firebase Storage, and real-time Firestore persistence for seamless session continuity.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: [
         {
           id: 1,
           name: "LinkedIn",
           icon: "linkedin",
-          url: "https://linkedin.com/",
+          url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
         },
         {
           id: 2,
           name: "GitHub",
           icon: "github",
-          url: "https://github.com/",
+          url: "https://github.com/samstringzz",
         },
       ],
     },
@@ -308,19 +309,19 @@ export const singleProjectData = {
             "Deployed the entire application to Cloudflare Workers via wrangler.toml, leveraging edge compute for fast global load times. The component-driven React 18 + TypeScript architecture ensures full type safety across the codebase, with Vite handling fast builds and hot module replacement during development.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: [
         {
           id: 1,
           name: "LinkedIn",
           icon: "linkedin",
-          url: "https://linkedin.com/",
+          url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367",
         },
         {
           id: 2,
           name: "GitHub",
           icon: "github",
-          url: "https://github.com/",
+          url: "https://github.com/samstringzz",
         },
       ],
     },
@@ -412,10 +413,10 @@ export const singleProjectData = {
             "Built a Store Owner mode giving sellers a separate dashboard to manage listings with approval status filters. A useStoreBrandColors hook and ThemeContext propagate brand colours throughout the UI at runtime using a three-level priority: store brand → white-label theme → default palette — ensuring every branded deployment feels native to its business.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: [
-        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
-        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
+        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367" },
+        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/samstringzz" },
       ],
     },
     RelatedProject: {
@@ -446,6 +447,19 @@ export const singleProjectData = {
         { id: 2, title: "Platform", details: "iOS & Android (Expo)" },
         { id: 3, title: "Backend", details: "Laravel REST API" },
         { id: 4, title: "Year", details: "2025" },
+        { id: 5, title: "Company", details: "YIP Online" },
+        {
+          id: 6,
+          title: "App Store",
+          details: "Download on the App Store",
+          url: "https://apps.apple.com/ca/app/rejoyly/id6753876875",
+        },
+        {
+          id: 7,
+          title: "Google Play",
+          details: "Get it on Google Play",
+          url: "https://play.google.com/store/apps/details?id=com.anonymous.rejoylymobile",
+        },
       ],
       ObjectivesHeading: "About Rejoyly",
       ObjectivesDetails:
@@ -497,10 +511,10 @@ export const singleProjectData = {
             "The seller side includes AI-assisted product detail extraction from photos, inventory management, bundle creation with discount rules, and a full analytics view of listings, ratings, and response rates. Architecture highlights include a feature-grouped API layer with centralised 401/403 handling, deep-link routing from FCM push notifications into chats/offers/meetups, environment-aware base URL resolution via Expo public env vars, and Maestro E2E test flows for critical auth and onboarding paths.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: [
-        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
-        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
+        { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367" },
+        { id: 2, name: "GitHub", icon: "github", url: "https://github.com/samstringzz" },
       ],
     },
     RelatedProject: {

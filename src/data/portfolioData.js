@@ -56,7 +56,7 @@ export const experienceData = [
     location: "Remote, Lagos",
     description: "Building production React Native apps for Android and iOS.",
     achievements: [
-      "Build and maintain React Native apps for Android and iOS, turning product requirements into production features",
+      "Build and maintain React Native apps for Android and iOS, including Rejoyly, a peer-to-peer marketplace live on the App Store and Google Play",
       "Built a reusable white-label setup so one shared codebase supports customised deployments for multiple brands",
       "Integrated REST APIs across authentication, product, cart, and checkout flows, including state handling and validation",
       "Work with product, UI/UX, and QA to test, debug, and ship client-facing releases"
@@ -65,18 +65,18 @@ export const experienceData = [
   },
   {
     id: 2,
-    role: "Freelance Developer",
+    role: "Freelance Mobile & Full Stack Developer",
     company: "Bincom Dev Center",
     type: "Freelance",
     period: "Feb 2024 - Present",
     location: "Remote, Lagos",
-    description: "Freelance development of SaaS web applications.",
+    description: "Freelance mobile and web development for Bincom's eMigr8 products.",
     achievements: [
-      "Build and maintain SaaS web apps with React and Firebase, turning user stories and wireframes into reusable features",
-      "Integrate third-party APIs and take part in code reviews to keep code aligned with team standards",
-      "Work directly with clients to gather requirements and demo completed features"
+      "Built eMigr8 Visa Companion with React Native and Expo, live on the App Store and Google Play: visa routes, coaching, partner marketplace, premium content, and in-app subscription billing",
+      "Built the supporting React and TypeScript web apps, including the admin dashboard and partner and affiliate portals",
+      "Integrated third-party APIs, took part in code reviews, and worked directly with the client to gather requirements and demo features"
     ],
-    technologies: ["React", "Firebase", "REST APIs", "Git"]
+    technologies: ["React Native", "Expo", "React", "TypeScript", "Firebase"]
   },
   {
     id: 3,

@@ -2,8 +2,8 @@ const C = "/covers";
 const APP = "/projects/apps";
 
 const defaultSocial = [
-  { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/" },
-  { id: 2, name: "GitHub", icon: "github", url: "https://github.com/" },
+  { id: 1, name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/oluwatosin-ayinde-41b434367" },
+  { id: 2, name: "GitHub", icon: "github", url: "https://github.com/samstringzz" },
 ];
 
 export const additionalProjectsData = {
@@ -93,7 +93,7 @@ export const additionalProjectsData = {
             "Configured multi-env EAS pipelines (development, staging, production) with OTA updates, web export, and Cloudflare deployment for the web companion surface.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -164,7 +164,7 @@ export const additionalProjectsData = {
             "Implemented Expo Router navigation with secure auth (Face ID, secure store), camera/photo evidence capture, and QR code sharing for registry discovery.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -234,7 +234,7 @@ export const additionalProjectsData = {
             "Shipped social auth (Google/Apple), deep-link onboarding based on feedSetupCompleted state, and OTA updates via EAS for rapid JS fixes.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -313,7 +313,7 @@ export const additionalProjectsData = {
             "Added AI-powered support chatbot with dynamic FAQ suggestions and booking-aware conversation context.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -377,7 +377,7 @@ export const additionalProjectsData = {
             "Delivered admin tooling for reservations, user management, event updates, QR ticket scanning at entry, and contact form review.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -439,7 +439,7 @@ export const additionalProjectsData = {
             "Contact form posts to the live MakerMan backend with reCAPTCHA v2, structured SEO metadata, and JSON-LD for local business discovery.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -502,7 +502,7 @@ export const additionalProjectsData = {
             "Integrated Stripe offers tab, pricing configuration, device push campaigns, and admin activity logging with analytics charts.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -563,7 +563,7 @@ export const additionalProjectsData = {
             "Built generateAssessment, claimAssessment, recoverAssessmentFromArtifact, and retryPendingAssessments (scheduled every 15 minutes) with daily rate limits and tier-aware access control.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -594,6 +594,13 @@ export const additionalProjectsData = {
         { id: 2, title: "Product", details: "Rejoyly ecosystem" },
         { id: 3, title: "Pages", details: "Landing, Join, Legal" },
         { id: 4, title: "Year", details: "2025" },
+        { id: 5, title: "Company", details: "YIP Online" },
+        {
+          id: 6,
+          title: "Website",
+          details: "rejoyly.vercel.app",
+          url: "https://rejoyly.vercel.app/",
+        },
       ],
       ObjectivesHeading: "About the Site",
       ObjectivesDetails:
@@ -617,7 +624,7 @@ export const additionalProjectsData = {
             "Implemented POST /api/contact and POST /api/referral routes proxying to the Rejoyly API with environment-aware base URL configuration.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {
@@ -684,7 +691,7 @@ export const additionalProjectsData = {
             "Implemented value teaser responses when free-tier users exhaust credits, driving conversion without blocking the entire partner tool surface.",
         },
       ],
-      SocialSharingHeading: "Share This Project",
+      SocialSharingHeading: "Connect With Me",
       SocialSharing: defaultSocial,
     },
     RelatedProject: {

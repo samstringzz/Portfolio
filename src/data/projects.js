@@ -181,7 +181,10 @@ export const projectsData = [
     isFeatured: true,
     slug: "rejoyly",
     year: "2025",
-    status: "Case Study",
+    status: "Live",
+    appStoreUrl: "https://apps.apple.com/ca/app/rejoyly/id6753876875",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.anonymous.rejoylymobile",
     impact: "Mobile marketplace",
     summary:
       "A P2P kids' resale marketplace with AI-assisted listing creation, real-time Pusher chat, Trust & Joy Score reputation layers, offer/counter-offer flows, and meetup scheduling — built on React Native 0.81 + Expo 54.",
@@ -380,7 +383,8 @@ export const projectsData = [
     isFeatured: true,
     slug: "rejoyly-landing",
     year: "2025",
-    status: "Case Study",
+    status: "Live",
+    externalUrl: "https://rejoyly.vercel.app/",
     impact: "Marketing site",
     summary:
       "Conversion-focused web presence for the Rejoyly mobile marketplace — landing, join flow, and backend integrations.",
