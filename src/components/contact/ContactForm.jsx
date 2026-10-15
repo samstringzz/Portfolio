@@ -1,8 +1,27 @@
-import { FiSend } from "react-icons/fi";
+"use client";
+
+import { FiSend, FiCheckCircle } from "react-icons/fi";
+import { useForm, ValidationError } from "@formspree/react";
 import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
 
 const ContactForm = () => {
+  const [state, handleSubmit] = useForm("myzyyakr");
+
+  if (state.succeeded) {
+    return (
+      <div className="flex flex-col items-center rounded-2xl border border-white/10 bg-surface-raised p-8 text-center sm:p-12">
+        <FiCheckCircle className="text-5xl text-emerald-400" aria-hidden="true" />
+        <h2 className="mt-5 text-xl font-semibold text-white sm:text-2xl">
+          Message sent
+        </h2>
+        <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-400">
+          Thanks for reaching out. I'll get back to you as soon as I can.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-2xl border border-white/10 bg-surface-raised p-6 sm:p-8">
       <h2 className="text-xl font-semibold text-white sm:text-2xl">
@@ -13,11 +32,7 @@ const ContactForm = () => {
         can help.
       </p>
 
-      <form
-        action="https://formspree.io/f/myzyyakr"
-        method="POST"
-        className="mt-8"
-      >
+      <form onSubmit={handleSubmit} className="mt-8">
         <div className="grid gap-5 sm:grid-cols-2">
           <FormInput
             inputLabel="Full Name"
@@ -67,13 +82,25 @@ const ContactForm = () => {
             placeholder="A bit of context, timeline, and what you need."
             required
           />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+            className="mt-1 text-sm text-red-400"
+          />
         </div>
+
+        <ValidationError
+          errors={state.errors}
+          className="mt-4 text-sm text-red-400"
+        />
 
         <div className="mt-8">
           <Button
-            title="Send Message"
+            title={state.submitting ? "Sending..." : "Send Message"}
             type="submit"
             ariaLabel="Send Message"
+            disabled={state.submitting}
             icon={<FiSend size={16} />}
           />
         </div>
