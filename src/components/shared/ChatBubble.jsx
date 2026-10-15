@@ -125,7 +125,7 @@ const ChatBubble = () => {
         className="inline-flex items-center gap-2 rounded-full bg-emerald-400 p-3.5 text-[#061018] shadow-lg shadow-black/30 transition hover:scale-105 hover:bg-emerald-300 sm:px-5 sm:py-3"
       >
         {open ? <FiX size={24} /> : <FiMessageCircle size={24} />}
-        <span className="hidden text-sm font-medium sm:inline">{open ? "Close" : "Chat with me"}</span>
+        <span className="hidden text-sm font-medium sm:inline">{open ? "Close" : "Send a message"}</span>
       </button>
     </div>
   );
