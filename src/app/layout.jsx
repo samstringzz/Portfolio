@@ -1,6 +1,7 @@
 import "./globals.css";
 import AppHeader from "@/components/shared/AppHeader";
 import AppFooter from "@/components/shared/AppFooter";
+import ChatBubble from "@/components/shared/ChatBubble";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         <AppHeader />
         <main>{children}</main>
         <AppFooter />
+        <ChatBubble />
       </body>
     </html>
   );
